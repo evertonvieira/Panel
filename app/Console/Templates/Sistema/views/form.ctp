@@ -18,7 +18,7 @@
 ?>
 <div class="row">
 	<div class="col-lg-12">
-		<div class="box panel panel-default">
+		<div class="box panel panel-primary">
 			<div class="panel-heading">
 				<h3 class="panel-title"><?php printf("<?php echo __('%s %s'); ?>", Inflector::humanize($action), $singularHumanName); ?></h3>
 			</div>
@@ -43,7 +43,7 @@
 						}
 						echo "\n";
 						echo "\t\t\t\t\t<div class=\"pull-left\">\n";
-						echo "\t\t\t\t\t\t<?php echo \$this->Form->submit('Save', array('class' => 'btn btn-large btn-success')); ?>\n";
+						echo "\t\t\t\t\t\t<?php echo \$this->Form->button('<i class=\"glyphicon glyphicon-saved\"></i> Save data', array('type' => 'submit', 'class' => 'btn btn-large btn-primary', 'escape' => false)); ?>\n";
 						echo "\t\t\t\t\t</div>\n";
 					?>
 				<?php echo "<?php echo \$this->Form->end(); ?>\n";?>

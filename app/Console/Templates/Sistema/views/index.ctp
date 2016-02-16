@@ -30,9 +30,9 @@
 					<thead>
 						<tr>
 						<?php foreach ($fields as $field): ?>
-							<th class="text-left"><?php echo "<?php echo \$this->Paginator->sort('{$field}'); ?>"; ?>:</th>
+							<th class="text-left"><?php echo "<?php echo __(\"{$field}\"); ?>"; ?></th>
 						<?php endforeach; ?>
-							<th class="text-left"><?php echo "<?php echo __('Actions:'); ?>"; ?></th>
+							<th width="60" class="text-left"><?php echo "<?php echo __('Actions'); ?>"; ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -51,7 +51,7 @@
 								}
 							}
 							if ($isKey !== true) {
-								echo "\t\t<td class=\"text-center\"><?php echo h(\${$singularVar}['{$modelClass}']['{$field}']); ?>&nbsp;</td>\n";
+								echo "\t\t<td class=\"text-left\"><?php echo h(\${$singularVar}['{$modelClass}']['{$field}']); ?>&nbsp;</td>\n";
 							}
 						}
 						echo "\t\t<td class=\"text-left\">\n";
@@ -68,3 +68,14 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(function() {
+		$("#<?php echo str_replace(' ', '', $pluralHumanName); ?>").dataTable({
+			"language": {
+				"url": "//cdn.datatables.net/plug-ins/1.10.11/i18n/Portuguese-Brasil.json"
+			}
+
+		});
+	});
+</script>
