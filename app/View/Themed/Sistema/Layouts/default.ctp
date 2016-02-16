@@ -30,14 +30,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			echo $this->Html->meta('icon');
 			echo $this->Html->css(
 				array(
-					'../assets/components/bootstrap/dist/css/bootstrap.min.css',
+					'../assets/components/bootstrap/dist/css/bootstrap.min',
+					'../assets/components/bootstrap/dist/css/bootstrap-theme.min',
+					'../assets/components/datatables/media/css/dataTables.bootstrap.min.css',
 					'font-awesome.min',
 					'sb-admin'
 				)
 			);
 			echo $this->Html->script(
-				array('../assets/components/jquery/dist/jquery.min.js',
-					'../assets/components/bootstrap/dist/js/bootstrap.min.js'
+				array('../assets/components/jquery/dist/jquery.min',
+					'../assets/components/bootstrap/dist/js/bootstrap.min',
+					'../assets/components/datatables/media/js/jquery.dataTables.min',
+					'../assets/components/datatables/media/js/dataTables.bootstrap.min',
+					'scripts'
 				)
 			);
 			echo $this->fetch('meta');
@@ -57,10 +62,21 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<div class="container-fluid">
 					<!-- Page Heading -->
 					<div class="row">
+						<aside class="right-side">
 						<div class="col-lg-12">
+
+							<section class="content-header">
+								<h1>
+									<?php echo $title_for_layout; ?> <small>Control panel</small>
+								</h1>
+								<ol class="breadcrumb">
+									<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+									<li class="active">Blank page</li>
+								</ol>
+							</section>
 							<?php echo $this->Flash->render(); ?>
 							<?php echo $this->fetch('content'); ?>
-							<?php echo $this->element('sql_dump'); ?>
+							<?php //echo $this->element('sql_dump'); ?>
 						</div>
 					</div>
 				</div>
