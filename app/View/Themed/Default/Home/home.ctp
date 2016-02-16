@@ -1,3 +1,16 @@
+<h1 class="page-header">
+	Principal
+	<small>subtítulo</small>
+</h1>
+<ol class="breadcrumb">
+	<li>
+		<i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+	</li>
+	<li class="active">
+		<i class="fa fa-file"></i> Principal
+	</li>
+</ol>
+
 <?php
 /**
  * @link          http://cakephp.org CakePHP(tm) Project
