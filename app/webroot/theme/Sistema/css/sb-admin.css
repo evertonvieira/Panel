@@ -37,6 +37,14 @@
 	float: left;
 	cursor: default;
 }
+.loading{
+	display:none;
+	z-index:100;
+	position:absolute;
+	left:50%;
+	right:50%;
+	top:50%;
+}
 
 /* Global Styles */
 

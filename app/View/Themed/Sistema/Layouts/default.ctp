@@ -59,6 +59,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="wrapper">
 			<?php echo $this->element("menu_top"); ?>
 			<div id="page-wrapper">
+				<div class="loading"><?php echo $this->Html->image('loading.gif', array('alt' => 'Carregando...')); ?></div>
 				<div class="container-fluid">
 					<!-- Page Heading -->
 					<div class="row">

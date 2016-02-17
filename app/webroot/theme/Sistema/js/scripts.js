@@ -1,8 +1,12 @@
 $(document).ready(function() {
 	$("a").click(function(event){
 		event.preventDefault();
-		linkLocation = this.href;
-		$("#page-wrapper").fadeOut(1000, redirectPage);
+		linkLocation = $(this).attr("href");
+		console.log(linkLocation);
+		if ( linkLocation != "#"){
+			$(".loading").css({"display":"block"});
+			$(".box-primary").fadeOut(2500, redirectPage);
+		}
 	});
 	function redirectPage() {
 		window.location = linkLocation;
