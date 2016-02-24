@@ -29,19 +29,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<?php
 			echo $this->Html->meta('icon');
 			echo $this->Html->css(
-				array(
-					'../assets/components/bootstrap/dist/css/bootstrap.min',
-					'../assets/components/bootstrap/dist/css/bootstrap-theme.min',
-					'../assets/components/datatables/media/css/dataTables.bootstrap.min.css',
+				array('bootstrap',
+					'bootstrap-theme',
+					'dataTables.bootstrap.css',
 					'font-awesome.min',
 					'sb-admin'
 				)
 			);
 			echo $this->Html->script(
-				array('../assets/components/jquery/dist/jquery.min',
-					'../assets/components/bootstrap/dist/js/bootstrap.min',
-					'../assets/components/datatables/media/js/jquery.dataTables.min',
-					'../assets/components/datatables/media/js/dataTables.bootstrap.min',
+				array('jquery',
+					'bootstrap',
+					'jquery.dataTables',
+					'dataTables.bootstrap',
 					'scripts'
 				)
 			);
@@ -59,7 +58,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="wrapper">
 			<?php echo $this->element("menu_top"); ?>
 			<div id="page-wrapper">
-				<div class="loading"><?php echo $this->Html->image('loading.gif', array('alt' => 'Carregando...')); ?></div>
 				<div class="container-fluid">
 					<!-- Page Heading -->
 					<div class="row">
