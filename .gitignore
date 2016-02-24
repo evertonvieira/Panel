@@ -30,3 +30,7 @@ Thumbs.db
 ######################
 /app/webroot/assets
 /node_modules
+app/webroot/theme/Sistema/css/main.min.css
+app/webroot/theme/Sistema/css/main.css
+app/webroot/theme/Sistema/js/main.js
+app/webroot/theme/Sistema/js/main.min.js
