@@ -43,15 +43,32 @@ module.exports = function (grunt) {
 					ext: '.min.css'
 				}]
 			}
-		}// minificando css
+		}, // minificando css
+
+		watch: {
+			dist: {
+				files: [
+				 'app/webroot/theme/Sistema/css/sb-admin.css'
+				],
+				tasks: [ 'concat:css', 'cssmin' ],
+				options: {
+					interrupt: true,
+				},
+			}
+		}
+
 
 	});
 
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	// task default
 	grunt.registerTask('default',['concat', 'uglify', 'cssmin']);
+
+	//watch
+	grunt.registerTask( 'w', [ 'watch' ] );
 
 }
