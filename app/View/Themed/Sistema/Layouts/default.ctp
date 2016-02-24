@@ -28,22 +28,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</title>
 		<?php
 			echo $this->Html->meta('icon');
-			echo $this->Html->css(
-				array('bootstrap',
-					'bootstrap-theme',
-					'dataTables.bootstrap.css',
-					'font-awesome.min',
-					'sb-admin'
-				)
-			);
-			echo $this->Html->script(
-				array('jquery',
-					'bootstrap',
-					'jquery.dataTables',
-					'dataTables.bootstrap',
-					'scripts'
-				)
-			);
+			echo $this->Html->css(array('main.min'));
+			echo $this->Html->script(array('main.min'));
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
