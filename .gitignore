@@ -26,6 +26,7 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# Bower dependencias #
+# Dependencias #
 ######################
 /app/webroot/assets
+/node_modules
