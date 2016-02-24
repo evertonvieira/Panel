@@ -8,7 +8,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="index.html">SB Admin</a>
+		<?php echo $this->Html->link('Serp FIP', array('controller'=>'admin', 'action'=>'index', 'admin'=>false, 'plugin'=>false),array('class'=>'navbar-brand', 'title'=>'Serp FIP', 'escape'=>false));?>
 	</div>
 
 	<?php if ($this->Amanager->is_logged()): ?>
@@ -41,7 +41,7 @@
 								</span>
 								<div class="media-body">
 									<h5 class="media-heading">
-										<strong><?php echo $this->Amanager->get_user_logged(); ?></strong>
+										<strong></strong>
 									</h5>
 									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
 									<p>Lorem ipsum dolor sit amet, consectetur...</p>

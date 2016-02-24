@@ -23,6 +23,15 @@
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
+.panel-heading{
+	background:#333 !important;
+	padding:15px;
+	border:0px;
+}
+.panel-primary{
+	border-color: #ccc;
+}
+
 .box-body{
 	clear:both;
 	padding:10px 0px;

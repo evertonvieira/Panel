@@ -7,6 +7,8 @@ class AdminController extends AppController {
   public function admin_index() {
   }
   public function index() {
+		$this->admin_index;
+    $this->autoRender = false;
     $this->render("admin_index");
   }
 
