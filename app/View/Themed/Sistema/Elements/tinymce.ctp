@@ -2,7 +2,7 @@
 
 <script>
 	tinymce.init({
-		selector: 'textarea',
+		selector: '.editor',
 		height: 300,
 		plugins: [
 			'advlist autolink lists link image charmap print preview anchor',

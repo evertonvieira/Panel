@@ -11,35 +11,31 @@
 				<table id="Pages" class="table table-bordered table-striped table-responsive">
 					<thead>
 						<tr>
-													<th class="text-left"><?php echo __("id"); ?></th>
-													<th class="text-left"><?php echo __("title"); ?></th>
-													<th class="text-left"><?php echo __("slug"); ?></th>
-													<th class="text-left"><?php echo __("data"); ?></th>
-													<th class="text-left"><?php echo __("body"); ?></th>
-													<th class="text-left"><?php echo __("summary"); ?></th>
-													<th class="text-left"><?php echo __("created"); ?></th>
-													<th class="text-left"><?php echo __("modified"); ?></th>
-													<th width="60" class="text-left"><?php echo __('Actions'); ?></th>
+							<th class="text-left"><?php echo __("id"); ?></th>
+							<th class="text-left"><?php echo __("title"); ?></th>
+							<th class="text-left"><?php echo __("slug"); ?></th>
+							<th class="text-left"><?php echo __("created"); ?></th>
+							<th class="text-left"><?php echo __("modified"); ?></th>
+							<th class="text-left"><?php echo __("status"); ?></th>
+							<th width="60" class="text-left"><?php echo __('Actions'); ?></th>
 						</tr>
 					</thead>
 					<tbody>
-					<?php foreach ($pages as $page): ?>
-	<tr>
-		<td class="text-left"><?php echo h($page['Page']['id']); ?>&nbsp;</td>
-		<td class="text-left"><?php echo h($page['Page']['title']); ?>&nbsp;</td>
-		<td class="text-left"><?php echo h($page['Page']['slug']); ?>&nbsp;</td>
-		<td class="text-left"><?php echo h($page['Page']['data']); ?>&nbsp;</td>
-		<td class="text-left"><?php echo h($page['Page']['body']); ?>&nbsp;</td>
-		<td class="text-left"><?php echo h($page['Page']['summary']); ?>&nbsp;</td>
-		<td class="text-left"><?php echo h($page['Page']['created']); ?>&nbsp;</td>
-		<td class="text-left"><?php echo h($page['Page']['modified']); ?>&nbsp;</td>
-		<td class="text-left">
-			<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('action' => 'view', $page['Page']['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>
-			<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-pencil"></i>'), array('action' => 'edit', $page['Page']['id']), array('class' => 'btn btn-warning btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'edit')); ?>
-			<?php echo $this->Form->postLink(__('<i class="glyphicon glyphicon-trash"></i>'), array('action' => 'delete', $page['Page']['id']), array('class' => 'btn btn-danger btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'delete'), __('Are you sure you want to delete # %s?', $page['Page']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
+						<?php foreach ($pages as $page): ?>
+							<tr>
+								<td class="text-left"><?php echo h($page['Page']['id']); ?>&nbsp;</td>
+								<td class="text-left"><?php echo h($page['Page']['title']); ?>&nbsp;</td>
+								<td class="text-left"><?php echo h($page['Page']['slug']); ?>&nbsp;</td>
+								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['created']); ?>&nbsp;</td>
+								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['modified']); ?>&nbsp;</td>
+								<td class="text-left"><?php echo $this->Formatacao->visivel($page['Page']['status']); ?>&nbsp;</td>
+								<td class="text-left">
+									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('action' => 'view', $page['Page']['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>
+									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-pencil"></i>'), array('action' => 'edit', $page['Page']['id']), array('class' => 'btn btn-warning btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'edit')); ?>
+									<?php echo $this->Form->postLink(__('<i class="glyphicon glyphicon-trash"></i>'), array('action' => 'delete', $page['Page']['id']), array('class' => 'btn btn-danger btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'delete'), __('Are you sure you want to delete # %s?', $page['Page']['id'])); ?>
+								</td>
+							</tr>
+						<?php endforeach; ?>
 					</tbody>
 				</table>
 			</div>

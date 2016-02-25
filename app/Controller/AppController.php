@@ -47,7 +47,7 @@ class AppController extends Controller {
     //'Html',
     //'Js' => array('Jquery'),
     'Amanager.Amanager',
-    //'Formatacao',
+    'Formatacao',
     //'Plupload.Plupload',
     //'Seo.Seo',
   );
