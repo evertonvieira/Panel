@@ -19,7 +19,7 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="box panel panel-primary">
-			<div class="panel-heading">
+			<div class="panel-heading panel-black">
 				<h3 class="panel-title"><?php printf("<?php echo __('%s %s'); ?>", Inflector::humanize($action), $singularHumanName); ?></h3>
 			</div>
 			<div class="panel-body">
