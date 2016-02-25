@@ -35,7 +35,7 @@
 						<tr>
 							<td><strong><?php echo __('Body'); ?></strong></td>
 							<td>
-								<?php echo h($page['Page']['body']); ?>
+								<?php echo $page['Page']['body']; ?>
 								&nbsp;
 							</td>
 						</tr>

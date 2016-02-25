@@ -3,7 +3,7 @@
 		<?php echo $this->Form->input('id', array('label'=>'Id:', 'class'=>'form-control', 'placeholder'=>'id'));?>
 	</div>
 	<div class="form-group">
-		<?php echo $this->Form->input('title', array('label'=>'Título da Página:', 'class'=>'form-control input-lg'));?>
+		<?php echo $this->Form->input('title', array('type'=>'text','label'=>'Título da Página:', 'class'=>'input-lg form-control'));?>
 	</div>
 
 	<div class="form-group">
