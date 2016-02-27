@@ -1,0 +1,3 @@
+[submodule "app/Plugin/Amanager"]
+	path = app/Plugin/Amanager
+	url = git@github.com:evertonvieira/Amanager.git
