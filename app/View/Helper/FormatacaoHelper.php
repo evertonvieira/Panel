@@ -277,6 +277,17 @@ class FormatacaoHelper extends AppHelper {
 
 	}
 
+	function featured($status) {
+
+    if( is_numeric($status) ){
+      return ($status == 1)?
+      '<span class="label label-primary">Sim</span>':
+      '<span class="label label-danger">Não</span>';
+    }
+    return ($status == 'Ativo')?1:0;
+
+	}
+
 /**
  * Formata um valor para reais
  *
