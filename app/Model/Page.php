@@ -34,14 +34,4 @@ class Page extends AppModel {
 			)
 		),
 	);
-
-	public function beforeValidate($options = array()) {
-    if(!empty($this->data['Page']['title'])){
-      // Obtém o slug pelo título
-      $titulo = Inflector::slug($this->data['Page']['title'], '-');
-      $this->data['Page']['slug'] =  strtolower($titulo);
-    }
-		return true;
-	}
-
 }

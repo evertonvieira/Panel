@@ -11,6 +11,8 @@ module.exports = function (grunt) {
 					'app/webroot/theme/Sistema/js/bootstrap.js',
 					'app/webroot/theme/Sistema/js/jquery.dataTables.js',
 					'app/webroot/theme/Sistema/js/dataTables.bootstrap.js',
+					'app/webroot/theme/Sistema/js/bootstrap-filestyle.js',
+					'app/webroot/theme/Sistema/js/datetimepicker.js',
 					'app/webroot/theme/Sistema/js/scripts.js',
 				],
 				dest: 'app/webroot/theme/Sistema/js/main.js'
@@ -20,6 +22,7 @@ module.exports = function (grunt) {
 					'app/webroot/theme/Sistema/css/bootstrap.css',
 					'app/webroot/theme/Sistema/css/bootstrap-theme.css',
 					'app/webroot/theme/Sistema/css/dataTables.bootstrap.css',
+					'app/webroot/theme/Sistema/css/datetimepicker.css',
 					'app/webroot/theme/Sistema/css/font-awesome.min.css',
 					'app/webroot/theme/Sistema/css/sb-admin.css',
 				],
@@ -48,7 +51,7 @@ module.exports = function (grunt) {
 		watch: {
 			dist: {
 				files: [
-				 'app/webroot/theme/Sistema/css/sb-admin.css'
+				 'app/webroot/theme/Sistema/css/sb-admin.css',
 				],
 				tasks: [ 'concat:css', 'cssmin' ],
 				options: {
