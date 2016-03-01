@@ -42,7 +42,7 @@
 						<tr>
 							<td><strong><?php echo __('Body'); ?></strong></td>
 							<td>
-								<?php echo h($news['News']['body']); ?>
+								<?php echo $news['News']['body']; ?>
 								&nbsp;
 							</td>
 						</tr>
