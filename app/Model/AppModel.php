@@ -31,6 +31,7 @@ App::uses('Model', 'Model');
  */
 class AppModel extends Model {
 
+
 	public $actsAs = array('AjusteData');
 
 	public function beforeValidate($options = array()) {
