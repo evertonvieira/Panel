@@ -1,9 +1,4 @@
 $(document).ready(function(){
-	$(":file").filestyle({
-    buttonText: "Selecione a imagem",
-    icon: true,
-  })
-
 	jQuery('#datetimepicker').datetimepicker({
 		lang:'pt',
 		timepicker:false,

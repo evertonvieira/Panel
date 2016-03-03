@@ -35,9 +35,6 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<?php echo $this->Form->input('ext', array('label'=>'Thumb:', 'type'=>'file', 'class'=>'form-control', 'placeholder'=>'thumb'));?>
-			</div>
-			<div class="form-group">
 				<?php echo $this->Form->input('Category', array('label'=>'Category:','multiple' =>'checkbox','type' => 'select'));?>
 			</div>
 		</div>
