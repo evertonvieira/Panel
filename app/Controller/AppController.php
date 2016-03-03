@@ -35,6 +35,7 @@ class AppController extends Controller {
 	public $theme = "Default";
 
 	var $components = array(
+		'Upload',
     'Amanager.Amanager' => array(
       'login_action' => array('controller'=>'users', 'action'=>'login', 'plugin'=>'amanager', 'admin'=>false ),
       'login_redirect' => array('controller'=>'amanager', 'plugin' => 'amanager', 'action'=>'index', 'admin'=>false ),
@@ -48,7 +49,7 @@ class AppController extends Controller {
     //'Js' => array('Jquery'),
     'Amanager.Amanager',
     'Formatacao',
-    //'Plupload.Plupload',
+    'Plupload.Plupload',
     //'Seo.Seo',
   );
 

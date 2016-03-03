@@ -124,6 +124,8 @@ Configure::write('Global.urls_livres',$global_urls_livres);
 //Carregando plugin Amanager
 CakePlugin::loadAll(array(
 	'Amanager' => array('bootstrap' => true),
+	'Images' => array('routes' => true),
+
 ));
 
 

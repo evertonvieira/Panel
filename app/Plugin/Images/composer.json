@@ -1,0 +1,16 @@
+{
+  "name": "jacksonbicalho/images",
+  "description": "Gerenciador de images",
+  "license": "MIT",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Jackson Bicalho",
+      "email": "jacksonbicalho@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+
+  }
+}
