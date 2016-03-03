@@ -40,7 +40,7 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
-.panel-heading{
+.panel-black{
 	background:#333 !important;
 	padding:15px;
 	border:0px;
