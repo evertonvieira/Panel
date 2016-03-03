@@ -1,0 +1,87 @@
+/* Plugin Images */
+div.image_featured_selected{
+  float: right;
+  height: 150px;
+  width: 150px;
+}
+div.image_featured_selected img{
+  height: 150px;
+  margin: 5px;
+  width: 150px;
+}
+div.plugin_images_list_images div.plugin_images_list_images_item{
+  float: left;
+  height: 150px;
+  margin: 5px;
+  width: 150px;
+  position: relative;
+}
+
+div.plugin_images_list_images_item_img img{
+  width:150px;
+  height: 150px;
+}
+.plugin_images_list_images_item_tools {
+  background-color: #000000;
+  bottom: 0;
+  color: #FFFFFF;
+  display: block;
+  font-family: 'tahoma';
+  font-size: 15px;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+div.plugin_images_list_images_item_tools div.plugin_images_list_images_item_destaque input.imagem_destaque{
+  float: left;
+  margin: 7px;
+}
+div.plugin_images_list_images_item_tools div.plugin_images_list_images_item_destaque div.image_featured{
+  margin:5px;
+}
+div.plugin_images_list_images_item_tools div.plugin_images_list_images_item_destaque div.image_featured span{
+  display: block;
+  font-size: 12px;
+}
+
+div.plugin_images_list_images_item_tools div.plugin_images_list_images_item_check input.checkbox{
+  float: left;
+}
+div.plugin_images_list_images_item_tools div.plugin_images_list_images_item_check label{
+  font-size: 12px;
+  margin: 6px;
+}
+div.plugin_images_list_images_item span.glyphicon.checked{
+  color: #D01A1A;
+  display: none;
+  float: right;
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+div.plugin_images_list_images_item_tools div.plugin_images_list_images_item_delete{
+  text-align: center;
+}
+.plugin_images_list_images_item span.label.image_featured_selected{
+  margin: 0 auto;
+  padding: 6px;
+  position: absolute;
+  top: 0;
+  width: 75%;
+  display:none;
+}
+div.plugin_images_list_images div.delete_all{
+  text-align: right;
+  width: 155px;
+}
+div.plugin_images_list_images div.delete_all div.select_delete label{
+  display: block;
+  float: left;
+  margin-left: 5px;
+  width: 130px;
+}
+div.plugin_images_list_images div.confirm div .btn{
+  width:100%;
+}

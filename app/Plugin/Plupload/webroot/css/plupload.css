@@ -1,0 +1,9 @@
+div.images div.modal div.modal-body div.px-widget div div.upload-data div.result{
+  float: left;
+  height: 80px;
+  margin-right: 5px;
+  width: 80px;
+}
+#ImageImagem{
+	clip: initial !important;
+}

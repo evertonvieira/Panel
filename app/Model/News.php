@@ -22,6 +22,10 @@ class News extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'uniqueTitleRule' => array(
+				'rule' => 'isUnique',
+				'message' => 'Já existe uma notícia com este título!'
+			)
 		),
 		'summary' => array(
 			'notBlank' => array(
