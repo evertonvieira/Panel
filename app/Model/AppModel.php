@@ -32,7 +32,7 @@ App::uses('Model', 'Model');
 class AppModel extends Model {
 
 
-	public $actsAs = array('AjusteData');
+	public $actsAs = array('AjusteData', 'Images.Images');
 
 	public function beforeValidate($options = array()) {
 		if (isset($this->data[$this->name]['title'])){
