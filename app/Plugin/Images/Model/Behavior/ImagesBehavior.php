@@ -39,6 +39,35 @@ class ImagesBehavior extends ModelBehavior {
     $folder->delete();
   }
 
+	/**
+	 * Called before each find operation. Return false if you want to halt the find
+	 * call, otherwise return the (modified) query data.
+	 *
+	 * @param array $queryData Data used to execute this query, i.e. conditions, order, etc.
+	 * @return mixed true if the operation should continue, false if it should abort; or, modified
+	 *               $queryData to continue with new $queryData
+	 * @link http://book.cakephp.org/2.0/en/models/callback-methods.html#beforefind
+	 */
+	public function beforeFind(Model $model, $queryData) {
+		if($model->alias != 'Mage'){
+			$model->bindModel(
+				array('hasMany' => array(
+					'Image' => array(
+						'className' => 'Images.Image',
+						'foreignKey' => "foreign_key",
+						'conditions' => array(
+							'Image.model' => "{$model->alias}"
+						),
+						'dependent' => true
+					)
+				))
+			);
+
+		}
+		return true;
+	}
+
+
 }
 
 ?>

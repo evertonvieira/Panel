@@ -23,7 +23,7 @@ class NewsController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->News->recursive = 0;
+		$this->News->recursive = 2;
 		$this->set('news', $this->paginate());
 	}
 
@@ -35,6 +35,7 @@ class NewsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->News->recursive = 2;
 		if (!$this->News->exists($id)) {
 			throw new NotFoundException(__('Invalid news'));
 		}
@@ -43,81 +44,12 @@ class NewsController extends AppController {
 	}
 
 /**
- * add method
- *
- * @return void
- */
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->News->create();
-			if ($this->News->save($this->request->data)) {
-				$this->Session->setFlash(__('The news has been saved'), 'flash/success');
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The news could not be saved. Please, try again.'), 'flash/error');
-			}
-		}
-		$categories = $this->News->Category->find('list');
-		$this->set(compact('categories'));
-	}
-
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function edit($id = null) {
-        $this->News->id = $id;
-		if (!$this->News->exists($id)) {
-			throw new NotFoundException(__('Invalid news'));
-		}
-		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->News->save($this->request->data)) {
-				$this->Session->setFlash(__('The news has been saved'), 'flash/success');
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The news could not be saved. Please, try again.'), 'flash/error');
-			}
-		} else {
-			$options = array('conditions' => array('News.' . $this->News->primaryKey => $id));
-			$this->request->data = $this->News->find('first', $options);
-		}
-		$categories = $this->News->Category->find('list');
-		$this->set(compact('categories'));
-	}
-
-/**
- * delete method
- *
- * @throws NotFoundException
- * @throws MethodNotAllowedException
- * @param string $id
- * @return void
- */
-	public function delete($id = null) {
-		if (!$this->request->is('post')) {
-			throw new MethodNotAllowedException();
-		}
-		$this->News->id = $id;
-		if (!$this->News->exists()) {
-			throw new NotFoundException(__('Invalid news'));
-		}
-		if ($this->News->delete()) {
-			$this->Session->setFlash(__('News deleted'), 'flash/success');
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->Session->setFlash(__('News was not deleted'), 'flash/error');
-		$this->redirect(array('action' => 'index'));
-	}
-/**
  * admin_index method
  *
  * @return void
  */
 	public function admin_index() {
-		$this->News->recursive = 0;
+		$this->News->recursive = 2;
 		$this->set('news', $this->paginate());
 	}
 

@@ -1,4 +1,3 @@
-
 <div class="row">
 	<div class="col-xs-12">
 		<div class="box box-primary">
@@ -43,13 +42,6 @@
 							<td><strong><?php echo __('Body'); ?></strong></td>
 							<td>
 								<?php echo $news['News']['body']; ?>
-								&nbsp;
-							</td>
-						</tr>
-						<tr>
-							<td><strong><?php echo __('Ext'); ?></strong></td>
-							<td>
-								<?php echo h($news['News']['ext']); ?>
 								&nbsp;
 							</td>
 						</tr>
