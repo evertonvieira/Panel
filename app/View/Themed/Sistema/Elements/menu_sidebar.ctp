@@ -1,41 +1,61 @@
-<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+<?php
+  $id = isset($id)?$id:false;
+  $menu = $this->requestAction("/menus/load/{$id}");
+  $menus = array();
+  foreach ($menu['MenuSection'] as $section){
+    if( count($section['MenuSectionLink'])>0 ){
+      $menus['sessoes'][ $section['id'] ] = array( 'label'=> $section['name'] );
+      foreach ( $section['MenuSectionLink'] as $link){
+      $params = Router::parse( $link['alias']);
+        $menus['sessoes'][ $section['id'] ]['links'][] = array(
+          'alias'=> $link['alias'],
+          'label'=>__( $link['name'] ),
+          'link'=> $params,
+          'title'=>__("Languages")
+        );
+      }
+    }
+  }
+?>
+
 <div class="collapse navbar-collapse navbar-ex1-collapse">
 	<ul class="nav navbar-nav side-nav">
 		<li>
-			<?php echo $this->Html->link('<i class="fa fa-fw fa-dashboard"></i> Dashboard', array('controller'=>'admin', 'action'=>'index', 'admin'=>false, 'plugin'=>false),array('title'=>'', 'escape'=>false));?>
+			<?php
+				echo $this->Html->link('<i class="fa fa-dashboard"></i> Home', array('controller'=>'admin', 'plugin'=>false),array('title'=>'Home', 'escape'=>false));
+			?>
 		</li>
-		<li>
-			<a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-		</li>
-		<li>
-			<a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-		</li>
-		<li>
-			<a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-		</li>
-		<li>
-			<a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-		</li>
-		<li>
-			<a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-		</li>
-		<li>
-			<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-			<ul id="demo" class="collapse">
-				<li>
-					<a href="#">Dropdown Item</a>
-				</li>
-				<li>
-					<a href="#">Dropdown Item</a>
-				</li>
-			</ul>
-		</li>
-		<li class="active">
-			<a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-		</li>
-		<li>
-			<a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-		</li>
+
+		<?php foreach( $menus['sessoes'] as $k => $menu ):
+			$O = Set::classicExtract( $menu['links'] , '{n}.alias' );
+			$controller = $this->request->params['controller'];
+			$key = array_search( $controller , $O);
+			$in = '';
+			if( is_numeric($key)){
+				$in = 'in';
+			}
+			?>
+			<li>
+				<a href="#collapse<?php echo $k; ?>" data-toggle="collapse" data-parent="#accordion">
+					<?=$menu['label'];?> <i class="fa fa-fw fa-caret-down"></i>
+				</a>
+				<ul id="collapse<?php echo $k; ?>" class="collapse">
+					<li>
+						<?php foreach( $menu['links'] as $link){ ?>
+							<?php
+								echo $this->Html->link(
+									$link['label'],
+									$link['link'],
+									array('title'=>$link['title'] )
+								);
+							?>
+						<?php } ?>
+					</li>
+				</ul>
+			</li>
+		<?php endforeach; ?>
 	</ul>
 </div>
-<!-- /.navbar-collapse -->
+
+
+
