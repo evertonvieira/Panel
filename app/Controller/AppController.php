@@ -36,6 +36,8 @@ class AppController extends Controller {
 
 	var $components = array(
 		'Upload',
+		'Flash',
+		'Session',
     'Amanager.Amanager' => array(
       'login_action' => array('controller'=>'users', 'action'=>'login', 'plugin'=>'amanager', 'admin'=>false ),
       'login_redirect' => array('controller'=>'amanager', 'plugin' => 'amanager', 'action'=>'index', 'admin'=>false ),
@@ -43,9 +45,9 @@ class AppController extends Controller {
     ),
   );
   public $helpers = array(
-    //'Form',
-    //'Session',
-    //'Html',
+    'Form',
+    'Session',
+    'Html',
     //'Js' => array('Jquery'),
     'Amanager.Amanager',
     'Formatacao',

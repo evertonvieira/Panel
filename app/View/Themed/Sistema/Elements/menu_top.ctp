@@ -111,5 +111,5 @@
 			</li>
 		</ul>
 	<?php endif; ?>
-	<?php echo $this->element("menu_sidebar"); ?>
+	<?php echo $this->element('menu_sidebar', array('id'=>4));?>
 </nav>
