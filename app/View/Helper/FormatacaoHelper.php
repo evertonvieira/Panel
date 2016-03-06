@@ -255,7 +255,7 @@ class FormatacaoHelper extends AppHelper {
       '<span class="label label-primary">Publicado</span>':
       '<span class="label label-default">Rascunho</span>';
     }
-    return ($status == 'Ativo')?1:0;
+    return ($status == 'Publicado')?1:0;
 
 	}
 
@@ -277,6 +277,7 @@ class FormatacaoHelper extends AppHelper {
 
 	}
 
+	//imagem de destaque
 	function featured($status) {
 
     if( is_numeric($status) ){
@@ -287,6 +288,45 @@ class FormatacaoHelper extends AppHelper {
     return ($status == 'Ativo')?1:0;
 
 	}
+	//sexo do jogador
+	function sexo($status) {
+
+    if( is_numeric($status) ){
+      return ($status == 1)?
+      'Feminino':
+      'Masculino';
+    }
+    return ($status == 'Masculino')?1:0;
+
+	}
+
+	//escolaridade
+	function escolaridade($status) {
+
+    switch ($status){
+			case 0:
+				return "Fundamental";
+				break;
+			case 1:
+				return "Médio";
+				break;
+			case 2:
+				return "Superior";
+				break;
+			case 3:
+				return "Outros";
+				break;
+			default:
+
+		}
+
+
+
+	}
+
+
+
+
 
 /**
  * Formata um valor para reais
