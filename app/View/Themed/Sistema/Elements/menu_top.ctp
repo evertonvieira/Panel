@@ -103,7 +103,7 @@
 					<li class="divider"></li>
 					<li>
 						<?php
-							echo $this->Html->link('<i class="fa fa-fw fa-power-off"></i> Log Out',	array('controller'=> 'users',	'action'=>'logout',	'plugin'=>'amanager'),
+							echo $this->Html->link('<i class="fa fa-fw fa-power-off"></i> Log Out',	array('controller'=> 'users',	'action'=>'logout',	'plugin'=>'amanager', 'admin'=>false),
 							array('escape' => false, 'title' => 'Log Out'));
 						?>
 					</li>
