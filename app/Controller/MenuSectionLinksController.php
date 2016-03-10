@@ -14,7 +14,8 @@ class MenuSectionLinksController extends AppController {
  */
 	public function admin_index() {
 		$this->MenuSectionLink->recursive = 0;
-		$this->set('menuSectionLinks', $this->paginate());
+		$menuSectionLinks = $this->MenuSectionLink->find('all', array('limit' => 100));
+		$this->set(compact('menuSectionLinks'));
 	}
 
 /**
