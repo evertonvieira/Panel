@@ -2,10 +2,16 @@ $(document).ready(function(){
 	jQuery('#datetimepicker, #contrato').datetimepicker({
 		lang:'pt',
 		timepicker:false,
-		timepicker:false,
 		format:'d/m/Y',
 		mask: true
 	});
+
+	jQuery('#ano').datetimepicker({
+		lang:'pt',
+		timepicker:false,
+		format:'Y',
+	});
+
 	$("#datetimepicker, #contrato").on("change", function () {
 		var id = $(this).attr("id");
 		var val = $("label[for='" + id + "']").text();
