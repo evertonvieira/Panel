@@ -13,9 +13,8 @@
 						<tr>
 							<th class="text-left"><?php echo __("id"); ?></th>
 							<th class="text-left"><?php echo __("name"); ?></th>
-							<th class="text-left"><?php echo __("body"); ?></th>
 							<th class="text-left"><?php echo __("ext"); ?></th>
-							<th class="text-left"><?php echo __("club_category_id"); ?></th>
+							<th class="text-left"><?php echo __("category"); ?></th>
 							<th width="60" class="text-left"><?php echo __('Actions'); ?></th>
 						</tr>
 					</thead>
@@ -24,7 +23,6 @@
 							<tr>
 								<td class="text-left"><?php echo h($club['Club']['id']); ?>&nbsp;</td>
 								<td class="text-left"><?php echo h($club['Club']['name']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $club['Club']['body']; ?>&nbsp;</td>
 								<td class="text-left"><?php echo h($club['Club']['ext']); ?>&nbsp;</td>
 								<td class="text-left"><?php echo h($club['ClubCategory']['title']); ?>&nbsp;</td>
 								<td class="text-left">

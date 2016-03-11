@@ -40,7 +40,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong><?php echo __('Club Category Id'); ?></strong></td>
+							<td><strong><?php echo __('Club Category'); ?></strong></td>
 							<td>
 								<?php echo h($club['ClubCategory']['title']); ?>
 								&nbsp;
