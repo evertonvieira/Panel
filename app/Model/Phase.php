@@ -12,7 +12,11 @@ class Phase extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'title';
+	public $displayField = array('title', 'ano');
+
+	public $virtualFields = array(
+		'name' => 'CONCAT(Phase.title, " - ", Phase.ano)'
+	);
 
 /**
  * Validation rules

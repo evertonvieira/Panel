@@ -60,26 +60,4 @@ class Championship extends AppModel {
 		)
 	);
 
-
-/**
- * hasAndBelongsToMany associations
- *
- * @var array
- */
-	public $hasAndBelongsToMany = array(
-		'Competition' => array(
-			'className' => 'Competition',
-			'joinTable' => 'championships_competitions',
-			'foreignKey' => 'championship_id',
-			'associationForeignKey' => 'competition_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-		)
-	);
-
 }

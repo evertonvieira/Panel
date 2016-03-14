@@ -43,75 +43,6 @@ class ChampionshipsController extends AppController {
 	}
 
 /**
- * add method
- *
- * @return void
- */
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->Championship->create();
-			if ($this->Championship->save($this->request->data)) {
-				$this->Session->setFlash(__('The championship has been saved'), 'flash/success');
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The championship could not be saved. Please, try again.'), 'flash/error');
-			}
-		}
-		$competitions = $this->Championship->Competition->find('list');
-		$this->set(compact('competitions'));
-	}
-
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function edit($id = null) {
-        $this->Championship->id = $id;
-		if (!$this->Championship->exists($id)) {
-			throw new NotFoundException(__('Invalid championship'));
-		}
-		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Championship->save($this->request->data)) {
-				$this->Session->setFlash(__('The championship has been saved'), 'flash/success');
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The championship could not be saved. Please, try again.'), 'flash/error');
-			}
-		} else {
-			$options = array('conditions' => array('Championship.' . $this->Championship->primaryKey => $id));
-			$this->request->data = $this->Championship->find('first', $options);
-		}
-		$competitions = $this->Championship->Competition->find('list');
-		$this->set(compact('competitions'));
-	}
-
-/**
- * delete method
- *
- * @throws NotFoundException
- * @throws MethodNotAllowedException
- * @param string $id
- * @return void
- */
-	public function delete($id = null) {
-		if (!$this->request->is('post')) {
-			throw new MethodNotAllowedException();
-		}
-		$this->Championship->id = $id;
-		if (!$this->Championship->exists()) {
-			throw new NotFoundException(__('Invalid championship'));
-		}
-		if ($this->Championship->delete()) {
-			$this->Session->setFlash(__('Championship deleted'), 'flash/success');
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->Session->setFlash(__('Championship was not deleted'), 'flash/error');
-		$this->redirect(array('action' => 'index'));
-	}
-/**
  * admin_index method
  *
  * @return void
@@ -151,7 +82,11 @@ class ChampionshipsController extends AppController {
 				$this->Session->setFlash(__('The championship could not be saved. Please, try again.'), 'flash/error');
 			}
 		}
-		$phases = $this->Championship->Phase->find('list');
+		$array = $this->Championship->Phase->find('all');
+		$phases = array();
+		foreach ($array as $key => $arr) {
+			$phases[$key] = $arr['Phase']['name'];
+		}
 		$this->set(compact('phases'));
 	}
 
@@ -178,7 +113,11 @@ class ChampionshipsController extends AppController {
 			$options = array('conditions' => array('Championship.' . $this->Championship->primaryKey => $id));
 			$this->request->data = $this->Championship->find('first', $options);
 		}
-		$phases = $this->Championship->Phase->find('list');
+		$array = $this->Championship->Phase->find('all');
+		$phases = array();
+		foreach ($array as $key => $arr) {
+			$phases[$key] = $arr['Phase']['name'];
+		}
 		$this->set(compact('phases'));
 	}
 
