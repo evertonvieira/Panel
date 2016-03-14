@@ -69,13 +69,11 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 	float: left;
 	cursor: default;
 }
-.loading{
-	display:none;
-	z-index:100;
-	position:absolute;
-	left:50%;
-	right:50%;
-	top:50%;
+
+.vezes{
+	font-size: 3.5em;
+	text-align: center;
+	margin: 0 auto;
 }
 
 /* Global Styles */

@@ -17,6 +17,10 @@ $(document).ready(function(){
 		var val = $("label[for='" + id + "']").text();
 		$("#msg").text(val + " changed");
 	});
+	jQuery('#datajogo').datetimepicker({
+		lang:'pt',
+		mask:true,
+	});
 
 	$("#telefone").mask("(99) 99999-9999");
 	$("#identidade").mask("99.999.999-9");
