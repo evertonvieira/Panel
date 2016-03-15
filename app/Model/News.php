@@ -74,6 +74,16 @@ class News extends AppModel {
 	}
 
 	public function beforeValidate ($options = array()) {
+
+		if (isset($this->data[$this->name]['title'])){
+			if(!empty($this->data[$this->name]['title'])){
+				// Obtém o slug pelo título
+				$titulo = Inflector::slug($this->data[$this->name]['title'], '-');
+				$this->data[$this->name]['slug'] =  strtolower($titulo);
+			}
+			return true;
+		}
+
 		$registro = $this->findById( $this->id );
 		if(isset($registro[$this->name]['ext'])){
 			$modulo = $this->name;
