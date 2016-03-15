@@ -15,7 +15,7 @@
 							<th class="text-left"><?php echo __("title"); ?></th>
 							<th class="text-left"><?php echo __("slug"); ?></th>
 							<th class="text-left"><?php echo __("created"); ?></th>
-							<th class="text-left"><?php echo __("modified"); ?></th>
+							<th class="text-left"><?php echo __("Updated"); ?></th>
 							<th width="60" class="text-left"><?php echo __('Actions'); ?></th>
 						</tr>
 					</thead>
@@ -26,7 +26,7 @@
 								<td class="text-left"><?php echo h($category['Category']['title']); ?>&nbsp;</td>
 								<td class="text-left"><?php echo h($category['Category']['slug']); ?>&nbsp;</td>
 								<td class="text-left"><?php echo $this->Formatacao->dataHora($category['Category']['created']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $this->Formatacao->dataHora($category['Category']['modified']); ?>&nbsp;</td>
+								<td class="text-left"><?php echo $this->Formatacao->dataHora($category['Category']['updated']); ?>&nbsp;</td>
 								<td class="text-left">
 									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('action' => 'view', $category['Category']['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>
 									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-pencil"></i>'), array('action' => 'edit', $category['Category']['id']), array('class' => 'btn btn-warning btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'edit')); ?>

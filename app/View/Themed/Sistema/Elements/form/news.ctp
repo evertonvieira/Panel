@@ -1,4 +1,4 @@
-<?php echo $this->Form->create('News', array('role' => 'form')); ?>
+<?php echo $this->Form->create('News', array('role' => 'form', 'type'=>'file')); ?>
 	<div class="form-group">
 		<?php echo $this->Form->input('id', array('label'=>'Id:', 'class'=>'form-control', 'placeholder'=>'id'));?>
 	</div>
@@ -9,7 +9,7 @@
 		<?php echo $this->Form->input('body', array('label'=>'Conteúdo:', 'class'=>'editor form-control', 'placeholder'=>'body'));?>
 	</div>
 	<div class="form-group">
-		<?php echo $this->Form->input('summary', array('label'=>'Summary:', 'type'=>'textarea', 'class'=>'form-control', 'placeholder'=>'summary'));?>
+		<?php echo $this->Form->input('summary', array('label'=>'Summary:', 'type'=>'textarea', 'rows'=>'3', 'class'=>'form-control', 'placeholder'=>'summary'));?>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
@@ -33,6 +33,11 @@
 					<label for="datetimepicker" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
 					</label>
 				</div>
+			</div>
+			<div class="form-group">
+				<?php
+					echo $this->Form->input('imagem', array( 'type'=>'file', 'class'=>'form-control', 'label' =>'Imagem:'));
+				?>
 			</div>
 			<div class="form-group">
 				<?php echo $this->Form->input('Category', array('label'=>'Category:','multiple' =>'checkbox','type' => 'select'));?>

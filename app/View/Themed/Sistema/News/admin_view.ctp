@@ -67,9 +67,9 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong><?php echo __('Modified'); ?></strong></td>
+							<td><strong><?php echo __('Updated'); ?></strong></td>
 							<td>
-								<?php echo $this->Formatacao->dataHora($news['News']['modified']); ?>
+								<?php echo $this->Formatacao->dataHora($news['News']['updated']); ?>
 								&nbsp;
 							</td>
 						</tr>
@@ -77,6 +77,13 @@
 							<td><strong><?php echo __('Featured'); ?></strong></td>
 							<td>
 								<?php echo $this->Formatacao->featured($news['News']['featured']); ?>
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td><strong><?php echo __('Ext'); ?></strong></td>
+							<td>
+								<?php echo h($news['News']['ext']); ?>
 								&nbsp;
 							</td>
 						</tr>
@@ -101,7 +108,7 @@
 									<th class="text-center"><?php echo __('Title'); ?></th>
 									<th class="text-center"><?php echo __('Slug'); ?></th>
 									<th class="text-center"><?php echo __('Created'); ?></th>
-									<th class="text-center"><?php echo __('Modified'); ?></th>
+									<th class="text-center"><?php echo __('Updated'); ?></th>
 									<th class="text-center"><?php echo __('Actions'); ?></th>
 								</tr>
 							</thead>
@@ -114,7 +121,7 @@
 										<td class="text-center"><?php echo $category['title']; ?></td>
 										<td class="text-center"><?php echo $category['slug']; ?></td>
 										<td class="text-center"><?php echo $this->Formatacao->dataHora($category['created']); ?></td>
-										<td class="text-center"><?php echo $this->Formatacao->dataHora($category['modified']); ?></td>
+										<td class="text-center"><?php echo $this->Formatacao->dataHora($category['updated']); ?></td>
 										<td class="text-center">
 											<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('controller' => 'categories', 'action' => 'view', $category['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>
 											<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-pencil"></i>'), array('controller' => 'categories', 'action' => 'edit', $category['id']), array('class' => 'btn btn-warning btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'edit')); ?>

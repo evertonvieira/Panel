@@ -13,6 +13,7 @@ module.exports = function (grunt) {
 					'app/webroot/theme/Sistema/js/dataTables.bootstrap.js',
 					'app/webroot/theme/Sistema/js/datetimepicker.js',
 					'app/webroot/theme/Sistema/js/jquery.maskedinput.min.js',
+					'app/webroot/theme/Sistema/js/bootstrap-filestyle.js',
 					'app/webroot/theme/Sistema/js/scripts.js',
 				],
 				dest: 'app/webroot/theme/Sistema/js/main.js'

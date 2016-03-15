@@ -62,4 +62,27 @@ class News extends AppModel {
 		)
 	);
 
+	public function beforeDelete ($options = array()) {
+		$registro = $this->findById( $this->id );
+		if(isset($registro[$this->name]['ext'])){
+			$modulo = $this->name;
+			$file = new File ( APP.WEBROOT_DIR.DS."img" . "/{$this->name}/{$registro[$this->name]['id']}.{$registro[$this->name]['ext']}" );
+			if( $file->exists() ){
+				$file->delete();
+			}
+		}
+	}
+
+	public function beforeValidate ($options = array()) {
+		$registro = $this->findById( $this->id );
+		if(isset($registro[$this->name]['ext'])){
+			$modulo = $this->name;
+			$file = new File ( APP.WEBROOT_DIR.DS."img" . "/{$this->name}/{$registro[$this->name]['id']}.{$registro[$this->name]['ext']}" );
+			if( $file->exists() ){
+				$file->delete();
+			}
+		}
+	}
+
+
 }

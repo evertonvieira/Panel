@@ -43,5 +43,9 @@ $(document).ready(function(){
 		});
 	});
 
+	$(":file").filestyle({
+		buttonText: "Selecionar Imagem"
+	});
+
 
 });

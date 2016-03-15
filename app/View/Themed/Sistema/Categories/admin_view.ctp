@@ -48,9 +48,9 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong><?php echo __('Modified'); ?></strong></td>
+							<td><strong><?php echo __('Updated'); ?></strong></td>
 							<td>
-								<?php echo $this->Formatacao->dataHora($category['Category']['modified']); ?>
+								<?php echo $this->Formatacao->dataHora($category['Category']['updated']); ?>
 								&nbsp;
 							</td>
 						</tr>
@@ -74,8 +74,9 @@
 									<th class="text-center"><?php echo __('Title'); ?></th>
 									<th class="text-center"><?php echo __('Slug'); ?></th>
 									<th class="text-center"><?php echo __('Status'); ?></th>
+									<th class="text-center"><?php echo __('Ext'); ?></th>
 									<th class="text-center"><?php echo __('Created'); ?></th>
-									<th class="text-center"><?php echo __('Modified'); ?></th>
+									<th class="text-center"><?php echo __('Updated'); ?></th>
 									<th class="text-center"><?php echo __('Featured'); ?></th>
 									<th class="text-center"><?php echo __('Actions'); ?></th>
 								</tr>
@@ -89,8 +90,9 @@
 											<td class="text-center"><?php echo $news['title']; ?></td>
 											<td class="text-center"><?php echo $news['slug']; ?></td>
 											<td class="text-center"><?php echo $this->Formatacao->visivel($news['status']); ?></td>
+											<td class="text-center"><?php echo h($news['ext']); ?></td>
 											<td class="text-center"><?php echo $this->Formatacao->dataHora($news['created']); ?></td>
-											<td class="text-center"><?php echo $this->Formatacao->dataHora($news['modified']); ?></td>
+											<td class="text-center"><?php echo $this->Formatacao->dataHora($news['updated']); ?></td>
 											<td class="text-center"><?php echo $this->Formatacao->featured($news['featured']); ?></td>
 											<td class="text-center">
 												<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('controller' => 'news', 'action' => 'view', $news['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>
