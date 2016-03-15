@@ -69,11 +69,15 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 	float: left;
 	cursor: default;
 }
-
 .vezes{
 	font-size: 3.5em;
 	text-align: center;
 	margin: 0 auto;
+}
+.error-message{
+	font-size:12px;
+	color:#a94442;
+	font-weight:bold;
 }
 
 /* Global Styles */

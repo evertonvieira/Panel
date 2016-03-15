@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 $(document).ready(function(){
 	jQuery('#datetimepicker, #contrato').datetimepicker({
 		lang:'pt',
@@ -42,10 +43,7 @@ $(document).ready(function(){
 			$("input#logradouro").val( result.address );
 		});
 	});
-
 	$(":file").filestyle({
 		buttonText: "Selecionar Imagem"
 	});
-
-
 });

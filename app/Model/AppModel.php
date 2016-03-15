@@ -13,7 +13,6 @@ App::uses('File', 'Utility');
  * @package       app.Model
  */
 class AppModel extends Model {
-
   /**
    * Behavior
    *
@@ -31,7 +30,5 @@ class AppModel extends Model {
 			return true;
 		}
 	}
-
-
 }
 
