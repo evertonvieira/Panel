@@ -148,7 +148,7 @@ class ClubsController extends AppController {
 
 		if ($this->request->is('post') || $this->request->is('put')) {
 
-			if (!empty($this->request->data['Club']['imagem']['name'])){
+			if (!empty($this->data['Club']['imagem']['name'])){
 				// Monta o array de dados para o banco de dados
 				$this->request->data['Club']['ext'] = $this->Upload->get_extension($this->request->data['Club']['imagem']);
 				// Valida os dados da imagem com relação ao banco de dados
