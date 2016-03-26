@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 $(document).ready(function(){
 	jQuery('#datetimepicker, #contrato').datetimepicker({
 		lang:'pt',
