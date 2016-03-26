@@ -3,10 +3,10 @@
 		<?php echo $this->Form->input('id', array('label'=>'Id:', 'class'=>'form-control', 'placeholder'=>'id'));?>
 	</div>
 	<div class="form-group">
-		<?php echo $this->Form->input('title', array('label'=>'Title:', 'class'=>'form-control input-lg', 'placeholder'=>'title'));?>
+		<?php echo $this->Form->input('title', array('label'=> __('Title'), 'class'=>'form-control input-lg', 'placeholder'=>'title'));?>
 	</div>
 	<div class="form-group">
-		<?php echo $this->Form->input('description', array('label'=>'Description:', 'type'=>'textarea', 'class'=>'form-control', 'placeholder'=>'description'));?>
+		<?php echo $this->Form->input('description', array('label'=>__('Description'), 'type'=>'textarea', 'class'=>'form-control', 'placeholder'=>'description'));?>
 	</div>
 
 	<div class="pull-left">

@@ -3,24 +3,24 @@
 		<?php echo $this->Form->input('id', array('label'=>'Id:', 'class'=>'form-control', 'placeholder'=>'id'));?>
 	</div>
 	<div class="form-group">
-		<?php echo $this->Form->input('title', array('label'=>'Title:', 'class'=>'form-control input-lg', 'placeholder'=>'title'));?>
+		<?php echo $this->Form->input('title', array('label'=>__('Title'), 'class'=>'form-control input-lg', 'placeholder'=>'title'));?>
 	</div>
 	<div class="form-group">
-		<?php echo $this->Form->input('body', array('label'=>'Conteúdo:', 'class'=>'editor form-control', 'placeholder'=>'body'));?>
+		<?php echo $this->Form->input('body', array('label'=>__('Body'), 'class'=>'editor form-control', 'placeholder'=>'body'));?>
 	</div>
 	<div class="form-group">
-		<?php echo $this->Form->input('summary', array('label'=>'Summary:', 'type'=>'textarea', 'rows'=>'3', 'class'=>'form-control', 'placeholder'=>'summary'));?>
+		<?php echo $this->Form->input('summary', array('label'=>__('Summary'), 'type'=>'textarea', 'rows'=>'3', 'class'=>'form-control', 'placeholder'=>'summary'));?>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
 				<?php
-					echo $this->Form->input('status', array( 'type'=>'select', 'options' => array(0=>'Rascunho',1=>'Publicado'), 'class'=>'form-control', 'label' =>'Status:'));
+					echo $this->Form->input('status', array( 'type'=>'select', 'options' => array(0=>'Rascunho',1=>'Publicado'), 'class'=>'form-control', 'label' =>__('Status')));
 				?>
 			</div>
 			<div class="form-group">
 				<?php
-					echo $this->Form->input('featured', array( 'type'=>'select', 'options' => array(0=>'Sim',1=>'Não'), 'class'=>'form-control', 'label' =>'Featured:'));
+					echo $this->Form->input('featured', array( 'type'=>'select', 'options' => array(0=>'Sim',1=>'Não'), 'class'=>'form-control', 'label' =>__('Featured')));
 				?>
 			</div>
 		</div>
@@ -40,12 +40,12 @@
 				?>
 			</div>
 			<div class="form-group">
-				<?php echo $this->Form->input('Category', array('label'=>'Category:','multiple' =>'checkbox','type' => 'select'));?>
+				<?php echo $this->Form->input('Category', array('label'=>__('Categories'),'multiple' =>'checkbox','type' => 'select'));?>
 			</div>
 		</div>
 	</div>
 
 	<div class="pull-left">
-		<?php echo $this->Form->button('<i class="glyphicon glyphicon-saved"></i> Save data', array('type' => 'submit', 'class' => 'btn btn-large btn-primary', 'escape' => false)); ?>
+		<?php echo $this->Form->button('<i class="glyphicon glyphicon-saved"></i> Salvar', array('type' => 'submit', 'class' => 'btn btn-large btn-primary', 'escape' => false)); ?>
 	</div>
 <?php echo $this->Form->end(); ?>
