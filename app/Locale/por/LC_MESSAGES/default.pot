@@ -1,0 +1,1153 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"PO-Revision-Date: 2016-03-26 13:23-0300\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: Controller/CategoriesController.php:39;64;97;126
+msgid "Invalid category"
+msgstr "Categoria inválida"
+
+#: Controller/CategoriesController.php:79;101
+msgid "The category has been saved"
+msgstr "A categoria foi salva"
+
+#: Controller/CategoriesController.php:82;104
+msgid "The category could not be saved. Please, try again."
+msgstr "A categoria não pôde ser salvo. Por favor, tente novamente."
+
+#: Controller/CategoriesController.php:129
+msgid "Category deleted"
+msgstr "Categoria excluído"
+
+#: Controller/CategoriesController.php:132
+msgid "Category was not deleted"
+msgstr ""
+
+#: Controller/MenuSectionLinksController.php:30;64;91
+msgid "Invalid menu section link"
+msgstr ""
+
+#: Controller/MenuSectionLinksController.php:45;68
+msgid "The menu section link has been saved"
+msgstr ""
+
+#: Controller/MenuSectionLinksController.php:48;71
+msgid "The menu section link could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MenuSectionLinksController.php:95
+msgid "Menu section link deleted"
+msgstr ""
+
+#: Controller/MenuSectionLinksController.php:98
+msgid "Menu section link was not deleted"
+msgstr ""
+
+#: Controller/MenuSectionsController.php:29;63;90
+msgid "Invalid menu section"
+msgstr ""
+
+#: Controller/MenuSectionsController.php:44;67
+msgid "The menu section has been saved"
+msgstr ""
+
+#: Controller/MenuSectionsController.php:47;70
+msgid "The menu section could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MenuSectionsController.php:94
+msgid "Menu section deleted"
+msgstr ""
+
+#: Controller/MenuSectionsController.php:97
+msgid "Menu section was not deleted"
+msgstr ""
+
+#: Controller/MenusController.php:60;92;117
+msgid "Invalid menu"
+msgstr ""
+
+#: Controller/MenusController.php:75;96
+msgid "The menu has been saved"
+msgstr ""
+
+#: Controller/MenusController.php:78;99
+msgid "The menu could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MenusController.php:121
+msgid "Menu deleted"
+msgstr ""
+
+#: Controller/MenusController.php:124
+msgid "Menu was not deleted"
+msgstr ""
+
+#: Controller/NewsController.php:40;65;148;213
+msgid "Invalid news"
+msgstr ""
+
+#: Controller/NewsController.php:118;127;186
+msgid "The news has been saved"
+msgstr ""
+
+#: Controller/NewsController.php:121
+msgid "The club could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/NewsController.php:130;189
+msgid "The news could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/NewsController.php:216
+msgid "News deleted"
+msgstr ""
+
+#: Controller/NewsController.php:219
+msgid "News was not deleted"
+msgstr ""
+
+#: Controller/PagesController.php:69;102;131;159;192;221
+msgid "Invalid page"
+msgstr ""
+
+#: Controller/PagesController.php:84;106;174;196
+msgid "The page has been saved"
+msgstr ""
+
+#: Controller/PagesController.php:87;109;177;199
+msgid "The page could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PagesController.php:134;224
+msgid "Page deleted"
+msgstr ""
+
+#: Controller/PagesController.php:137;227
+msgid "Page was not deleted"
+msgstr ""
+
+#: Plugin/Amanager/Controller/GroupsController.php:30;64;94
+msgid "Invalid group"
+msgstr ""
+
+#: Plugin/Amanager/Controller/GroupsController.php:44;68
+msgid "The group has been saved"
+msgstr ""
+
+#: Plugin/Amanager/Controller/GroupsController.php:47;71
+msgid "The group could not be saved. Please, try again."
+msgstr ""
+
+#: Plugin/Amanager/Controller/GroupsController.php:97
+msgid "Group deleted"
+msgstr ""
+
+#: Plugin/Amanager/Controller/GroupsController.php:100
+msgid "Group was not deleted"
+msgstr ""
+
+#: Plugin/Amanager/Controller/RulesController.php:29;270;277
+msgid "Invalid Rule."
+msgstr ""
+
+#: Plugin/Amanager/Controller/RulesController.php:51
+msgid "The rule has been saved"
+msgstr ""
+
+#: Plugin/Amanager/Controller/RulesController.php:54
+msgid "The rule could not be saved. Please, try again."
+msgstr ""
+
+#: Plugin/Amanager/Controller/RulesController.php:110
+msgid "The rule has been saved."
+msgstr ""
+
+#: Plugin/Amanager/Controller/RulesController.php:113
+msgid "The Rule could not be saved. Please, try again."
+msgstr ""
+
+#: Plugin/Amanager/Controller/RulesController.php:158
+msgid "Rule deleted."
+msgstr ""
+
+#: Plugin/Amanager/Controller/RulesController.php:161
+msgid "Rule was not deleted."
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:36;71;102;264
+#: Plugin/Amanager/Model/User.php:219
+msgid "Invalid user"
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:106
+msgid "The master user can not be deleted!"
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:111
+msgid "User deleted"
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:114
+msgid "User was not deleted"
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:136
+msgid ""
+"Ocorreu um erro ao tentar processar o endereço solicitado. Caso o erro "
+"persista entre em contato com o administrador."
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:147
+msgid ""
+"O prazo para recuperação de senha expirou. Você deve reiniciar o processo "
+"clicando em perdi minha senha."
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:180
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:242
+msgid "Olá "
+msgstr ""
+
+#: Plugin/Amanager/Controller/Component/AmanagerComponent.php:125
+msgid "Acesso negado!"
+msgstr ""
+
+#: Plugin/Amanager/Controller/Component/AmanagerComponent.php:162
+msgid "Você tentou acessar um endereço não acessível neste momento"
+msgstr ""
+
+#: Plugin/Amanager/Controller/Component/AmanagerComponent.php:166
+msgid "Você foi desconectado do sistema"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/login.ctp:4;8
+msgid "Login"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/login.ctp:6
+msgid "User Name"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/login.ctp:7
+#: Plugin/Amanager/View/Groups/view.ctp:81
+msgid "Password"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/login.ctp:9
+msgid "I forgot my password"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/menu_sidebar.ctp:17
+msgid "<i class=\"fa fa-fw fa-table\"></i> Manager Users"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/menu_sidebar.ctp:28
+msgid "<i class=\"fa fa-fw fa-table\"></i> Manager Groups"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/menu_sidebar.ctp:39
+msgid "<i class=\"fa fa-fw fa-table\"></i> Manger Rules"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/options_checkbox.ctp:3
+#: Plugin/Amanager/View/Groups/index.ctp:15
+#: Plugin/Amanager/View/Groups/view.ctp:85
+#: Plugin/Amanager/View/Rules/index.ctp:11
+#: Plugin/Amanager/View/Users/index.ctp:16
+#: Plugin/Amanager/View/Users/view.ctp:94 Plugin/Images/View/Images/view.ctp:4
+#: View/Themed/Default/Categories/index.ctp:20
+#: View/Themed/Default/Categories/view.ctp:74
+#: View/Themed/Default/News/index.ctp:26 View/Themed/Default/News/view.ctp:98
+#: View/Themed/Sistema/Categories/admin_index.ctp:19
+#: View/Themed/Sistema/Categories/admin_view.ctp:81
+#: View/Themed/Sistema/MenuSectionLinks/admin_index.ctp:18
+#: View/Themed/Sistema/MenuSections/admin_index.ctp:17
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:53
+#: View/Themed/Sistema/Menus/admin_index.ctp:16
+#: View/Themed/Sistema/Menus/admin_view.ctp:45
+#: View/Themed/Sistema/News/admin_index.ctp:22
+#: View/Themed/Sistema/News/admin_view.ctp:112
+#: View/Themed/Sistema/Pages/admin_index.ctp:20
+msgid "Actions"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/sortable.ctp:70
+msgid "Attention!"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/sortable.ctp:73
+msgid "The new ordinance will only be saved when you click the save button."
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/sortable.ctp:76
+msgid "Save"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/sortable.ctp:77
+msgid "Cancel"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/update_rules_list.ctp:16
+#: Plugin/Amanager/View/Elements/form/_rules.ctp:102
+#: Plugin/Amanager/View/Groups/edit.ctp:2
+#: Plugin/Amanager/View/Groups/view.ctp:3
+#: Plugin/Amanager/View/Rules/view.ctp:6 Plugin/Amanager/View/Users/edit.ctp:2
+#: Plugin/Amanager/View/Users/view.ctp:5
+#: View/Themed/Sistema/Menus/admin_index.ctp:32
+#: View/Themed/Sistema/Menus/admin_view.ctp:64
+msgid "Delete"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/update_rules_list.ctp:16
+#: Plugin/Amanager/View/Elements/form/_rules.ctp:102
+msgid "Are you sure you want to delete this action: %s?"
+msgstr ""
+
+#: Plugin/Amanager/View/Emails/html/forgot_password.ctp:1
+msgid "Você solicitou uma alteração de senha em %s"
+msgstr ""
+
+#: Plugin/Amanager/View/Emails/html/forgot_password.ctp:2
+msgid "Seguindo o link abaixo você poderá alterar sua senha:"
+msgstr ""
+
+#: Plugin/Amanager/View/Emails/html/forgot_password.ctp:5
+msgid "Clique aqui para alterar sua senha"
+msgstr ""
+
+#: Plugin/Amanager/View/Emails/html/forgot_password.ctp:7
+msgid "O código de verificação: %s"
+msgstr ""
+
+#: Plugin/Amanager/View/Emails/html/forgot_password.ctp:8
+msgid ""
+"Se você não solicitou essa alteração, nenhuma ação é necessária. Sua senha "
+"permanecerá a mesma até que você ative este código."
+msgstr ""
+
+#: Plugin/Amanager/View/Emails/html/forgot_password.ctp:9
+msgid "Respeitosamente,"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/edit.ctp:2
+#: Plugin/Amanager/View/Groups/index.ctp:28
+#: Plugin/Amanager/View/Groups/view.ctp:3;103
+#: Plugin/Amanager/View/Rules/edit.ctp:6
+#: Plugin/Amanager/View/Rules/index.ctp:46
+#: Plugin/Amanager/View/Rules/view.ctp:6 Plugin/Amanager/View/Users/edit.ctp:2
+#: Plugin/Amanager/View/Users/index.ctp:30
+#: Plugin/Amanager/View/Users/view.ctp:5;110
+#: Plugin/Images/View/Elements/image_list (cópia).ctp:42
+#: Plugin/Images/View/Elements/image_list.ctp:56
+#: Plugin/Images/View/Images/edit.ctp:19 Plugin/Images/View/Images/view.ctp:7
+#: View/Themed/Default/Categories/index.ctp:35
+#: View/Themed/Default/Categories/view.ctp:97
+#: View/Themed/Default/News/index.ctp:47 View/Themed/Default/News/view.ctp:115
+#: View/Themed/Sistema/Categories/admin_index.ctp:33
+#: View/Themed/Sistema/Categories/admin_view.ctp:100
+#: View/Themed/Sistema/MenuSectionLinks/admin_index.ctp:38
+#: View/Themed/Sistema/MenuSections/admin_index.ctp:36
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:73
+#: View/Themed/Sistema/Menus/admin_index.ctp:32
+#: View/Themed/Sistema/Menus/admin_view.ctp:64
+#: View/Themed/Sistema/News/admin_index.ctp:40
+#: View/Themed/Sistema/News/admin_view.ctp:128
+#: View/Themed/Sistema/Pages/admin_index.ctp:35
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/index.ctp:26
+#: Plugin/Amanager/View/Groups/view.ctp:101
+#: Plugin/Amanager/View/Rules/index.ctp:44
+#: Plugin/Amanager/View/Users/index.ctp:28
+#: Plugin/Amanager/View/Users/view.ctp:108
+#: View/Themed/Default/Categories/index.ctp:33
+#: View/Themed/Default/Categories/view.ctp:95
+#: View/Themed/Default/News/index.ctp:45 View/Themed/Default/News/view.ctp:113
+#: View/Themed/Sistema/Categories/admin_index.ctp:31
+#: View/Themed/Sistema/Categories/admin_view.ctp:98
+#: View/Themed/Sistema/News/admin_index.ctp:38
+#: View/Themed/Sistema/News/admin_view.ctp:126
+#: View/Themed/Sistema/Pages/admin_index.ctp:33
+msgid "<i class=\"glyphicon glyphicon-eye-open\"></i>"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/index.ctp:27
+#: Plugin/Amanager/View/Groups/view.ctp:102
+#: Plugin/Amanager/View/Rules/index.ctp:45
+#: Plugin/Amanager/View/Users/index.ctp:29
+#: Plugin/Amanager/View/Users/view.ctp:109
+#: View/Themed/Default/Categories/index.ctp:34
+#: View/Themed/Default/Categories/view.ctp:96
+#: View/Themed/Default/News/index.ctp:46 View/Themed/Default/News/view.ctp:114
+#: View/Themed/Sistema/Categories/admin_index.ctp:32
+#: View/Themed/Sistema/Categories/admin_view.ctp:99
+#: View/Themed/Sistema/News/admin_index.ctp:39
+#: View/Themed/Sistema/News/admin_view.ctp:127
+#: View/Themed/Sistema/Pages/admin_index.ctp:34
+msgid "<i class=\"glyphicon glyphicon-pencil\"></i>"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/index.ctp:28
+#: Plugin/Amanager/View/Groups/view.ctp:103
+#: Plugin/Amanager/View/Rules/index.ctp:46
+#: Plugin/Amanager/View/Users/index.ctp:30
+#: Plugin/Amanager/View/Users/view.ctp:110
+#: View/Themed/Default/Categories/index.ctp:35
+#: View/Themed/Default/Categories/view.ctp:97
+#: View/Themed/Default/News/index.ctp:47 View/Themed/Default/News/view.ctp:115
+#: View/Themed/Sistema/Categories/admin_index.ctp:33
+#: View/Themed/Sistema/Categories/admin_view.ctp:100
+#: View/Themed/Sistema/News/admin_index.ctp:40
+#: View/Themed/Sistema/News/admin_view.ctp:128
+#: View/Themed/Sistema/Pages/admin_index.ctp:35
+msgid "<i class=\"glyphicon glyphicon-trash\"></i>"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:15
+msgid "Group"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:17
+#: Plugin/Amanager/View/Rules/view.ctp:15
+#: Plugin/Amanager/View/Users/view.ctp:14
+#: View/Themed/Default/Categories/view.ctp:8
+#: View/Themed/Default/News/view.ctp:8 View/Themed/Default/Pages/view.ctp:8
+#: View/Themed/Sistema/Categories/admin_view.ctp:8
+#: View/Themed/Sistema/MenuSectionLinks/admin_view.ctp:7
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:7
+#: View/Themed/Sistema/Menus/admin_view.ctp:7
+#: View/Themed/Sistema/News/admin_view.ctp:7
+#: View/Themed/Sistema/Pages/admin_view.ctp:7
+msgid "<i class=\"glyphicon glyphicon-pencil\"></i> Edit"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:25;79
+#: Plugin/Amanager/View/Rules/view.ctp:23;51
+#: Plugin/Amanager/View/Users/view.ctp:22;89
+#: Plugin/Images/View/Images/view.ctp:13
+#: View/Themed/Default/Categories/view.ctp:15;62
+#: View/Themed/Default/News/view.ctp:15;92
+#: View/Themed/Default/Pages/view.ctp:15
+#: View/Themed/Sistema/Categories/admin_view.ctp:16;73
+#: View/Themed/Sistema/MenuSectionLinks/admin_view.ctp:15
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:14;49
+#: View/Themed/Sistema/Menus/admin_view.ctp:14;42
+#: View/Themed/Sistema/News/admin_view.ctp:14;107
+#: View/Themed/Sistema/Pages/admin_view.ctp:15
+msgid "Id"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:33
+#: Plugin/Amanager/View/Rules/index.ctp:9
+#: Plugin/Amanager/View/Rules/view.ctp:31
+#: Plugin/Amanager/View/Users/view.ctp:30;90
+#: View/Themed/Sistema/MenuSectionLinks/admin_view.ctp:22
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:21;28;50
+#: View/Themed/Sistema/Menus/admin_view.ctp:21;43
+msgid "Name"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:40;82
+#: Plugin/Amanager/View/Rules/view.ctp:53
+#: Plugin/Amanager/View/Users/view.ctp:54;91
+#: View/Themed/Default/Categories/view.ctp:69
+#: View/Themed/Default/News/view.ctp:50
+#: View/Themed/Sistema/Categories/admin_view.ctp:76
+#: View/Themed/Sistema/News/admin_view.ctp:56
+#: View/Themed/Sistema/Pages/admin_view.ctp:57
+msgid "Status"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:48;83
+#: Plugin/Amanager/View/Users/view.ctp:62;92
+#: Plugin/Images/View/Images/view.ctp:38
+#: View/Themed/Default/Categories/view.ctp:35;70
+#: View/Themed/Default/News/view.ctp:55;96
+#: View/Themed/Default/Pages/view.ctp:45
+#: View/Themed/Sistema/Categories/admin_view.ctp:44;78
+#: View/Themed/Sistema/News/admin_view.ctp:63;110
+#: View/Themed/Sistema/Pages/admin_view.ctp:43
+msgid "Created"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:56;84
+#: Plugin/Amanager/View/Users/view.ctp:70;93
+#: Plugin/Images/View/Images/view.ctp:43
+#: View/Themed/Sistema/Categories/admin_index.ctp:18
+#: View/Themed/Sistema/Categories/admin_view.ctp:51;79
+#: View/Themed/Sistema/News/admin_view.ctp:70;111
+msgid "Updated"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:69
+msgid "Related Users"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:71
+#: Plugin/Amanager/View/Rules/add.ctp:6
+msgid "New User"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:80
+#: Plugin/Amanager/View/Users/view.ctp:38
+msgid "Username"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/add.ctp:2 Plugin/Amanager/View/Rules/edit.ctp:2
+msgid "List Rules"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/add.ctp:3 Plugin/Amanager/View/Rules/edit.ctp:3
+msgid "List Groups"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/add.ctp:4 Plugin/Amanager/View/Rules/edit.ctp:4
+msgid "New Group"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/add.ctp:5 Plugin/Amanager/View/Rules/edit.ctp:5
+msgid "List Users"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/edit.ctp:6
+msgid "Delete this rule"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/index.ctp:10
+msgid "Action"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/index.ctp:12
+msgid "Reorder"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/index.ctp:57
+msgid "previous"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/index.ctp:59
+msgid "next"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/view.ctp:13
+msgid "Rules"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/view.ctp:44
+msgid "Rule Actions"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/view.ctp:52
+#: View/Themed/Sistema/MenuSectionLinks/admin_view.ctp:29
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:51
+msgid "Alias"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/view.ctp:12
+msgid "Users"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/view.ctp:46
+msgid "Email"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/view.ctp:82
+msgid "Related Groups"
+msgstr ""
+
+#: Plugin/Images/Controller/ImagesController.php:72;76;100;143;148;153;243;247;280
+msgid "Invalid parent"
+msgstr ""
+
+#: Plugin/Images/Controller/ImagesController.php:215
+msgid "Invalid slide"
+msgstr ""
+
+#: Plugin/Images/Controller/ImagesController.php:239
+msgid "Invalid id parent"
+msgstr ""
+
+#: Plugin/Images/Controller/ImagesController.php:313
+msgid "Invalid image [optOrcEctAc4]"
+msgstr ""
+
+#: Plugin/Images/View/Images/add.ctp:34 Plugin/Images/View/Images/edit.ctp:36
+msgid "Submit"
+msgstr ""
+
+#: Plugin/Images/View/Images/admin_delete_all.ctp:2
+msgid "Images"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:2
+msgid "Image"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:6
+msgid "Edit Image"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:7
+msgid "Delete Image"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:8
+msgid "List Images"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:9
+msgid "New Image"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:18
+#: View/Themed/Default/Categories/view.ctp:20;63
+#: View/Themed/Default/News/view.ctp:20;93
+#: View/Themed/Default/Pages/view.ctp:20
+#: View/Themed/Sistema/Categories/admin_view.ctp:23;74
+#: View/Themed/Sistema/News/admin_view.ctp:21;108
+#: View/Themed/Sistema/Pages/admin_view.ctp:22
+msgid "Title"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:23
+#: View/Themed/Default/Categories/view.ctp:67
+#: View/Themed/Default/News/view.ctp:40
+#: View/Themed/Sistema/Categories/admin_view.ctp:77
+#: View/Themed/Sistema/News/admin_view.ctp:84
+msgid "Ext"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:28
+msgid "Model"
+msgstr ""
+
+#: Plugin/Images/View/Images/view.ctp:33
+msgid "Foreign Key"
+msgstr ""
+
+#: Plugin/Plupload/View/Helper/PluploadHelper.php:57
+msgid "Upad Image"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:80
+msgid "Janeiro"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:81
+msgid "Fevereiro"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:82
+msgid "Março"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:83
+msgid "Abril"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:84
+msgid "Maio"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:85
+msgid "Junho"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:86
+msgid "Julho"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:87
+msgid "Agosto"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:88
+msgid "Setembro"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:89
+msgid "Outobro"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:90
+msgid "Novembro"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:91
+msgid "Dezembro"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:111
+msgid "Jan"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:112
+msgid "Feb"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:113
+msgid "Mar"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:114
+msgid "Apr"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:115
+msgid "May"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:116
+msgid "Jun"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:117
+msgid "Jul"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:118
+msgid "Aug"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:119
+msgid "Sep"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:120
+msgid "Oct"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:121
+msgid "Nov"
+msgstr ""
+
+#: View/Helper/FormatacaoHelper.php:122
+msgid "Dec"
+msgstr ""
+
+#: View/Themed/Default/Categories/index.ctp:5
+#: View/Themed/Sistema/Categories/admin_index.ctp:5
+msgid "Categories"
+msgstr ""
+
+#: View/Themed/Default/Categories/index.ctp:7
+#: View/Themed/Sistema/Categories/admin_index.ctp:7
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Category"
+msgstr ""
+
+#: View/Themed/Default/Categories/index.ctp:14
+#: View/Themed/Default/News/index.ctp:14
+#: View/Themed/Sistema/Categories/admin_index.ctp:14
+#: View/Themed/Sistema/MenuSectionLinks/admin_index.ctp:14
+#: View/Themed/Sistema/MenuSections/admin_index.ctp:14
+#: View/Themed/Sistema/Menus/admin_index.ctp:14
+#: View/Themed/Sistema/News/admin_index.ctp:14
+#: View/Themed/Sistema/Pages/admin_index.ctp:14
+msgid "id"
+msgstr ""
+
+#: View/Themed/Default/Categories/index.ctp:15
+#: View/Themed/Default/News/index.ctp:15
+#: View/Themed/Sistema/Categories/admin_index.ctp:15
+#: View/Themed/Sistema/News/admin_index.ctp:15
+#: View/Themed/Sistema/Pages/admin_index.ctp:15
+msgid "title"
+msgstr ""
+
+#: View/Themed/Default/Categories/index.ctp:16
+#: View/Themed/Default/News/index.ctp:16
+#: View/Themed/Sistema/Categories/admin_index.ctp:16
+#: View/Themed/Sistema/News/admin_index.ctp:16
+#: View/Themed/Sistema/Pages/admin_index.ctp:16
+msgid "slug"
+msgstr ""
+
+#: View/Themed/Default/Categories/index.ctp:17
+msgid "description"
+msgstr ""
+
+#: View/Themed/Default/Categories/index.ctp:18
+#: View/Themed/Default/News/index.ctp:22
+#: View/Themed/Sistema/Categories/admin_index.ctp:17
+#: View/Themed/Sistema/News/admin_index.ctp:20
+#: View/Themed/Sistema/Pages/admin_index.ctp:17
+msgid "created"
+msgstr ""
+
+#: View/Themed/Default/Categories/index.ctp:19
+#: View/Themed/Default/News/index.ctp:23
+#: View/Themed/Sistema/Pages/admin_index.ctp:18
+msgid "modified"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:6
+#: View/Themed/Sistema/Categories/admin_view.ctp:6
+msgid "Category"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:25;64
+#: View/Themed/Default/News/view.ctp:25;94
+#: View/Themed/Default/Pages/view.ctp:25
+#: View/Themed/Sistema/Categories/admin_view.ctp:30;75
+#: View/Themed/Sistema/News/admin_view.ctp:28;109
+#: View/Themed/Sistema/Pages/admin_view.ctp:29
+msgid "Slug"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:30
+#: View/Themed/Default/News/view.ctp:95
+#: View/Themed/Sistema/Categories/admin_view.ctp:37
+msgid "Description"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:40;71
+#: View/Themed/Default/News/view.ctp:60;97
+#: View/Themed/Default/Pages/view.ctp:50
+#: View/Themed/Sistema/Pages/admin_view.ctp:50
+msgid "Modified"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:53
+#: View/Themed/Sistema/Categories/admin_view.ctp:64
+msgid "Related News"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:55
+#: View/Themed/Sistema/Categories/admin_view.ctp:66
+msgid "New News"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:65
+#: View/Themed/Default/News/view.ctp:30 View/Themed/Default/Pages/view.ctp:40
+#: View/Themed/Sistema/News/admin_view.ctp:35
+msgid "Summary"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:66
+#: View/Themed/Default/News/view.ctp:35 View/Themed/Default/Pages/view.ctp:35
+#: View/Themed/Sistema/News/admin_view.ctp:42
+#: View/Themed/Sistema/Pages/admin_view.ctp:36
+msgid "Body"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:68
+#: View/Themed/Default/News/view.ctp:45 View/Themed/Default/Pages/view.ctp:30
+#: View/Themed/Sistema/News/admin_view.ctp:49
+msgid "Data"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:72
+#: View/Themed/Default/News/view.ctp:65
+#: View/Themed/Sistema/Categories/admin_view.ctp:80
+#: View/Themed/Sistema/News/admin_view.ctp:77
+msgid "Featured"
+msgstr ""
+
+#: View/Themed/Default/Categories/view.ctp:73
+#: View/Themed/Default/News/view.ctp:70
+msgid "Thumb"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:5 View/Themed/Default/News/view.ctp:6
+#: View/Themed/Sistema/News/admin_index.ctp:5
+#: View/Themed/Sistema/News/admin_view.ctp:5
+msgid "News"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:7
+#: View/Themed/Sistema/News/admin_index.ctp:7
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New News"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:17
+msgid "summary"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:18
+msgid "body"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:19
+msgid "ext"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:20
+#: View/Themed/Sistema/News/admin_index.ctp:17
+msgid "data"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:21
+#: View/Themed/Sistema/News/admin_index.ctp:18
+#: View/Themed/Sistema/Pages/admin_index.ctp:19
+msgid "status"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:24
+#: View/Themed/Sistema/News/admin_index.ctp:19
+msgid "featured"
+msgstr ""
+
+#: View/Themed/Default/News/index.ctp:25
+msgid "thumb"
+msgstr ""
+
+#: View/Themed/Default/News/view.ctp:83
+#: View/Themed/Sistema/News/admin_view.ctp:98
+msgid "Related Categories"
+msgstr ""
+
+#: View/Themed/Default/News/view.ctp:85
+#: View/Themed/Sistema/News/admin_view.ctp:100
+msgid "New Category"
+msgstr ""
+
+#: View/Themed/Default/Pages/view.ctp:6
+#: View/Themed/Sistema/Pages/admin_view.ctp:5
+msgid "Page"
+msgstr ""
+
+#: View/Themed/Sistema/Categories/admin_add.ctp:5
+msgid "Admin Add Category"
+msgstr ""
+
+#: View/Themed/Sistema/Categories/admin_edit.ctp:5
+msgid "Admin Edit Category"
+msgstr ""
+
+#: View/Themed/Sistema/Elements/menu_sidebar.ctp:14
+msgid "Languages"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSectionLinks/admin_add.ctp:5
+msgid "Admin Add Menu Sections Link"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSectionLinks/admin_edit.ctp:5
+msgid "Admin Edit Menu Sections Link"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSectionLinks/admin_index.ctp:5
+#: View/Themed/Sistema/MenuSectionLinks/admin_view.ctp:5
+msgid "Menu Section Links"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSectionLinks/admin_index.ctp:7
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Menu Section Links"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSectionLinks/admin_index.ctp:15
+#: View/Themed/Sistema/MenuSections/admin_index.ctp:15
+#: View/Themed/Sistema/Menus/admin_index.ctp:15
+msgid "name"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSectionLinks/admin_index.ctp:16
+msgid "alias"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSectionLinks/admin_index.ctp:17
+msgid "menu_section_id"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSectionLinks/admin_view.ctp:36
+msgid "Menu Section"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_add.ctp:5
+msgid "Admin Add Menu Sections"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_edit.ctp:5
+msgid "Admin Edit Menu Sections"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_index.ctp:5
+msgid "Menu Sections"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_index.ctp:7
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Menu Section"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_index.ctp:16
+msgid "menu id"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:5
+#: View/Themed/Sistema/Menus/admin_index.ctp:5
+#: View/Themed/Sistema/Menus/admin_view.ctp:5
+msgid "Menus"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:40
+msgid "Related Menu Section Links"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:42
+msgid "New Menu Section Link"
+msgstr ""
+
+#: View/Themed/Sistema/MenuSections/admin_view.ctp:52
+msgid "Menu Section Id"
+msgstr ""
+
+#: View/Themed/Sistema/Menus/admin_add.ctp:5
+msgid "Admin Add Menu"
+msgstr ""
+
+#: View/Themed/Sistema/Menus/admin_edit.ctp:5
+msgid "Admin Edit Menu"
+msgstr ""
+
+#: View/Themed/Sistema/Menus/admin_index.ctp:7
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Menu"
+msgstr ""
+
+#: View/Themed/Sistema/Menus/admin_index.ctp:30
+#: View/Themed/Sistema/Menus/admin_view.ctp:62
+msgid "View"
+msgstr ""
+
+#: View/Themed/Sistema/Menus/admin_index.ctp:31
+#: View/Themed/Sistema/Menus/admin_view.ctp:63
+msgid "Edit"
+msgstr ""
+
+#: View/Themed/Sistema/Menus/admin_view.ctp:33
+msgid "Related Menu Sections"
+msgstr ""
+
+#: View/Themed/Sistema/Menus/admin_view.ctp:35
+msgid "New Menu Sections"
+msgstr ""
+
+#: View/Themed/Sistema/Menus/admin_view.ctp:44
+msgid "Menu_id"
+msgstr ""
+
+#: View/Themed/Sistema/News/admin_add.ctp:6
+msgid "Admin Add News"
+msgstr ""
+
+#: View/Themed/Sistema/News/admin_edit.ctp:6
+msgid "Admin Edit News"
+msgstr ""
+
+#: View/Themed/Sistema/News/admin_index.ctp:21
+msgid "updated"
+msgstr ""
+
+#: View/Themed/Sistema/News/admin_index.ctp:37
+msgid "<i class=\"glyphicon glyphicon-picture\"></i>"
+msgstr ""
+
+#: View/Themed/Sistema/Pages/admin_add.ctp:6
+msgid "Admin Add Page"
+msgstr ""
+
+#: View/Themed/Sistema/Pages/admin_edit.ctp:6
+msgid "Admin Edit Page"
+msgstr ""
+
+#: View/Themed/Sistema/Pages/admin_index.ctp:5
+msgid "Pages"
+msgstr ""
+
+#: View/Themed/Sistema/Pages/admin_index.ctp:7
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Page"
+msgstr ""
+
+#: Model/Category.php:validation for field title;validation description
+#: Model/News.php:validation summary Model/Page.php:validation title
+#: Plugin/Amanager/Model/Group.php:validation name
+#: Plugin/Amanager/Model/Rule.php:validation
+msgid "notBlank"
+msgstr ""
+
+#: Model/Category.php:validation for field title
+msgid "Já existe uma categoria com este título!"
+msgstr ""
+
+#: Model/Menu.php:validation for field name Model/MenuSection.php:validation
+#: Model/MenuSectionLink.php:validation name;validation alias
+#: Plugin/Amanager/Model/Module.php:validation
+#: Plugin/Images/Model/FeaturedImage.php:validation model
+#: Plugin/Images/Model/Image.php:validation ext;validation
+msgid "notempty"
+msgstr ""
+
+#: Model/MenuSection.php:validation for field menu_id
+#: Model/MenuSectionLink.php:validation menu_section_id
+#: Plugin/Amanager/Model/Module.php:validation rule_id
+#: Plugin/Images/Model/FeaturedImage.php:validation foreign_key;validation
+#: image_id Plugin/Images/Model/Image.php:validation foreign_key
+msgid "numeric"
+msgstr ""
+
+#: Model/News.php:validation for field title
+msgid "Já existe uma notícia com este título!"
+msgstr ""
+
+#: Model/Page.php:validation for field title
+msgid "Já existe uma página com este título!"
+msgstr ""
+
+#: Plugin/Amanager/Model/Group.php:validation for field name
+msgid "Já existe uma grupo com esse nome!"
+msgstr ""
+
+#: Plugin/Amanager/Model/Rule.php:validation for field name
+msgid "Já existe uma regra com esse nome!"
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field username
+msgid "Nome de usuário é obrigatório"
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field username
+msgid "Nome de usuário digitado já encontra-se cadastrado em nosso sistema"
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field password
+msgid "Senha não pode ficar em branco"
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field password
+msgid "Mínimo 8 caracteres"
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field password2
+msgid "Este campo é obrigatório"
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field password2
+msgid "A senha repetida não confere com a digitada no campo senha."
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field email
+msgid "E-mail é obrigatório"
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field email
+msgid "O endereço digitado não é um e-mail válido!"
+msgstr ""
+
+#: Plugin/Amanager/Model/User.php:validation for field email
+msgid "O e-mail digitado já encontra-se cadastrado em nosso sistema!"
+msgstr ""

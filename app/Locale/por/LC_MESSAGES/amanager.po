@@ -1,0 +1,248 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"PO-Revision-Date: 2016-03-26 14:29-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Portuguese\n"
+
+#: Plugin/Amanager/Controller/UsersController.php:50;76
+msgid "The user has been saved"
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:53;79;272
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:168
+msgid "Your password has been successfully saved"
+msgstr "Sua senha foi salva com sucesso"
+
+#: Plugin/Amanager/Controller/UsersController.php:193
+msgid "you already logged is"
+msgstr "você já está logado!"
+
+#: Plugin/Amanager/Controller/UsersController.php:204
+msgid "Username or password invalid"
+msgstr "Usuário ou senha incorretos"
+
+#: Plugin/Amanager/Controller/UsersController.php:247
+msgid "Please check your inbox"
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:252
+msgid "Não temos este e-mail cadastrado em nosso sistema"
+msgstr ""
+
+#: Plugin/Amanager/Controller/UsersController.php:269
+msgid "Dados alterados com sucesso"
+msgstr ""
+
+#: Plugin/Amanager/View/Amanager/index.ctp:8
+msgid "Version"
+msgstr ""
+
+#: Plugin/Amanager/View/Amanager/index.ctp:9
+msgid "CakePHP Version"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/form/_belongs_to_users.ctp:5
+#: Plugin/Amanager/View/Elements/form/_users.ctp:34
+msgid "Username"
+msgstr "Nome de usuário"
+
+#: Plugin/Amanager/View/Elements/form/_belongs_to_users.ctp:14
+#: Plugin/Amanager/View/Elements/form/_users.ctp:42
+#: Plugin/Amanager/View/Users/forgot_password.ctp:5
+#: Plugin/Amanager/View/Users/login.ctp:14
+msgid "Email"
+msgstr "E-mail"
+
+#: Plugin/Amanager/View/Elements/form/_belongs_to_users.ctp:20
+#: Plugin/Amanager/View/Elements/form/_users.ctp:60
+msgid "Group"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/form/_groups.ctp:6
+msgid "Manager Group"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/form/_groups.ctp:14
+#: Plugin/Amanager/View/Elements/form/_rules.ctp:113
+#: Plugin/Amanager/View/Elements/form/_users.ctp:64
+#: Plugin/Amanager/View/Users/mycount.ctp:49
+msgid "Submit"
+msgstr "Enviar"
+
+#: Plugin/Amanager/View/Elements/form/_rules.ctp:6
+msgid "Add Rule"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/form/_rules.ctp:79
+msgid "Rules list"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/form/_users.ctp:6;13
+#: Plugin/Amanager/View/Users/login.ctp:22;24
+msgid "Password"
+msgstr "Senha"
+
+#: Plugin/Amanager/View/Elements/form/_users.ctp:29
+#: Plugin/Amanager/View/Users/mycount.ctp:28
+msgid "Manager User"
+msgstr ""
+
+#: Plugin/Amanager/View/Elements/form/_users.ctp:48
+msgid "Name"
+msgstr "Nome"
+
+#: Plugin/Amanager/View/Elements/form/_users.ctp:52
+#: Plugin/Amanager/View/Groups/view.ctp:43;96
+#: Plugin/Amanager/View/Users/view.ctp:56
+msgid "Active"
+msgstr "Ativo"
+
+#: Plugin/Amanager/View/Elements/form/_users.ctp:52
+#: Plugin/Amanager/View/Groups/view.ctp:43;96
+#: Plugin/Amanager/View/Users/view.ctp:56
+msgid "Inactive"
+msgstr "Inativo"
+
+#: Plugin/Amanager/View/Groups/add.ctp:2
+#: Plugin/Amanager/View/Groups/edit.ctp:3
+#: Plugin/Amanager/View/Groups/view.ctp:4
+#: Plugin/Amanager/View/Rules/index.ctp:3 Plugin/Amanager/View/Users/add.ctp:3
+#: Plugin/Amanager/View/Users/edit.ctp:4
+msgid "List Groups"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/add.ctp:3
+#: Plugin/Amanager/View/Groups/edit.ctp:4
+#: Plugin/Amanager/View/Groups/index.ctp:3
+#: Plugin/Amanager/View/Groups/view.ctp:6 Plugin/Amanager/View/Users/add.ctp:2
+#: Plugin/Amanager/View/Users/edit.ctp:3
+#: Plugin/Amanager/View/Users/index.ctp:3
+msgid "List Users"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/add.ctp:4
+#: Plugin/Amanager/View/Groups/edit.ctp:5
+#: Plugin/Amanager/View/Groups/index.ctp:4
+#: Plugin/Amanager/View/Groups/view.ctp:7
+#: Plugin/Amanager/View/Users/index.ctp:4
+#: Plugin/Amanager/View/Users/view.ctp:4
+msgid "New User"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/index.ctp:2
+#: Plugin/Amanager/View/Rules/index.ctp:4 Plugin/Amanager/View/Users/add.ctp:4
+#: Plugin/Amanager/View/Users/edit.ctp:5
+#: Plugin/Amanager/View/Users/index.ctp:2
+msgid "New Group"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/index.ctp:35
+#: Plugin/Amanager/View/Users/index.ctp:37
+msgid "previous"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/index.ctp:37
+#: Plugin/Amanager/View/Users/index.ctp:39
+msgid "next"
+msgstr ""
+
+#: Plugin/Amanager/View/Groups/view.ctp:5
+msgid "Edit this group"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/index.ctp:2
+#: Plugin/Amanager/View/Rules/view.ctp:5
+msgid "New Rule"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/index.ctp:27
+msgid "Rules"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/view.ctp:3
+msgid "List Rules"
+msgstr ""
+
+#: Plugin/Amanager/View/Rules/view.ctp:4
+msgid "Edit this rule"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/access_denied.ctp:2
+msgid "User"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/forgot_password.ctp:3
+#: Plugin/Amanager/View/Users/recover_password.ctp:3
+msgid "Password Recovery"
+msgstr "Recuperação de senha"
+
+#: Plugin/Amanager/View/Users/forgot_password.ctp:5
+#: Plugin/Amanager/View/Users/login.ctp:16
+#: Plugin/Amanager/View/Users/recover_password.ctp:6;7
+msgid "Email address"
+msgstr "Endereço de e-mail"
+
+#: Plugin/Amanager/View/Users/forgot_password.ctp:6
+msgid "Continue"
+msgstr "Continuar"
+
+#: Plugin/Amanager/View/Users/login.ctp:10
+msgid "Please sign in"
+msgstr "Por favor, entre com seus dados:"
+
+#: Plugin/Amanager/View/Users/login.ctp:27
+msgid "Sign in"
+msgstr "Entrar"
+
+#: Plugin/Amanager/View/Users/login.ctp:32
+msgid "Forgot password"
+msgstr "Esqueceu sua senha?"
+
+#: Plugin/Amanager/View/Users/mycount.ctp:6
+msgid "Senha"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/mycount.ctp:13
+msgid "Repita a senha"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/mycount.ctp:33
+msgid "Nome de usuário"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/mycount.ctp:42
+msgid "E-mail"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/recover_password.ctp:6
+msgid "Enter the new password"
+msgstr "Digite a nova senha"
+
+#: Plugin/Amanager/View/Users/recover_password.ctp:7
+msgid "Enter the password again"
+msgstr "Digite a nova senha novamente"
+
+#: Plugin/Amanager/View/Users/recover_password.ctp:8
+msgid "Create password"
+msgstr "Criar senha"
+
+#: Plugin/Amanager/View/Users/view.ctp:2
+msgid "List users"
+msgstr ""
+
+#: Plugin/Amanager/View/Users/view.ctp:3
+msgid "Edit"
+msgstr "Editar"
