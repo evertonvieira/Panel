@@ -73,76 +73,12 @@ class PagesController extends AppController {
 	}
 
 /**
- * add method
- *
- * @return void
- */
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->Page->create();
-			if ($this->Page->save($this->request->data)) {
-				$this->Session->setFlash(__('The page has been saved'), 'flash/success');
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The page could not be saved. Please, try again.'), 'flash/error');
-			}
-		}
-	}
-
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function edit($id = null) {
-        $this->Page->id = $id;
-		if (!$this->Page->exists($id)) {
-			throw new NotFoundException(__('Invalid page'));
-		}
-		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Page->save($this->request->data)) {
-				$this->Session->setFlash(__('The page has been saved'), 'flash/success');
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The page could not be saved. Please, try again.'), 'flash/error');
-			}
-		} else {
-			$options = array('conditions' => array('Page.' . $this->Page->primaryKey => $id));
-			$this->request->data = $this->Page->find('first', $options);
-		}
-	}
-
-/**
- * delete method
- *
- * @throws NotFoundException
- * @throws MethodNotAllowedException
- * @param string $id
- * @return void
- */
-	public function delete($id = null) {
-		if (!$this->request->is('post')) {
-			throw new MethodNotAllowedException();
-		}
-		$this->Page->id = $id;
-		if (!$this->Page->exists()) {
-			throw new NotFoundException(__('Invalid page'));
-		}
-		if ($this->Page->delete()) {
-			$this->Session->setFlash(__('Page deleted'), 'flash/success');
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->Session->setFlash(__('Page was not deleted'), 'flash/error');
-		$this->redirect(array('action' => 'index'));
-	}
-/**
  * admin_index method
  *
  * @return void
  */
 	public function admin_index() {
+		$this->pageTitle = 'Listar Páginas';
 		$this->Page->recursive = 0;
 		$this->set('pages', $this->paginate());
 	}
@@ -155,6 +91,7 @@ class PagesController extends AppController {
  * @return void
  */
 	public function admin_view($id = null) {
+		$this->pageTitle = 'Ver Página';
 		if (!$this->Page->exists($id)) {
 			throw new NotFoundException(__('Invalid page'));
 		}
@@ -168,6 +105,7 @@ class PagesController extends AppController {
  * @return void
  */
 	public function admin_add() {
+		$this->pageTitle = 'Adicinar Página';
 		if ($this->request->is('post')) {
 			$this->Page->create();
 			if ($this->Page->save($this->request->data)) {
@@ -187,7 +125,8 @@ class PagesController extends AppController {
  * @return void
  */
 	public function admin_edit($id = null) {
-        $this->Page->id = $id;
+		$this->pageTitle = 'Editar Página';
+		$this->Page->id = $id;
 		if (!$this->Page->exists($id)) {
 			throw new NotFoundException(__('Invalid page'));
 		}

@@ -34,6 +34,8 @@ class AppController extends Controller {
 
 	public $theme = "Default";
 
+	public $pageTitle;
+
 	var $components = array(
 		'Upload',
 		'Flash',
@@ -83,6 +85,9 @@ class AppController extends Controller {
   }
 
   public function beforeRender(){
+
+		$this->set('title_for_layout', $this->pageTitle);
+
     if ( isset($this->request->params['prefix']) ){
       if ( $this->request->params['prefix'] == 'admin' ){
         $this->theme = 'Sistema';
