@@ -14,7 +14,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'Sistema administrativo');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>
-			<?php echo $cakeDescription ?>: <?php echo $this->fetch('title'); ?>
+			<?php echo $title_for_layout; ?> Control panel - <?php echo $this->fetch('title'); ?>
 		</title>
 		<?php
 			echo $this->Html->meta('icon');
@@ -54,8 +54,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 									<?php echo $title_for_layout; ?> <small>Control panel</small>
 								</h1>
 								<ol class="breadcrumb">
-									<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-									<li class="active">Blank page</li>
+									<li><?php echo $this->Html->link('<i class="fa fa-dashboard"></i> Home', array('controller'=>'admin', 'action'=>'index', 'admin'=>false, 'plugin'=>false),array('title'=>'Home', 'escape'=>false));?></li>
+									<li class="active"><?php echo $title_for_layout; ?></li>
 								</ol>
 							</section>
 							<?php echo $this->Flash->render(); ?>
