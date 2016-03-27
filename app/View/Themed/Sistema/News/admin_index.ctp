@@ -3,7 +3,7 @@
     <div class="box box-primary">
 			<div class="box-header">
 				<div class="box-tools pull-right">
-					<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-plus"></i> New News'), array('action' => 'add'), array('class' => 'btn btn-primary', 'escape' => false)); ?>
+					<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-plus"></i> Novo Post'), array('action' => 'add'), array('class' => 'btn btn-primary', 'escape' => false)); ?>
 				</div>
 			</div>
 			<div class="box-body">

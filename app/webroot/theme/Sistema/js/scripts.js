@@ -42,7 +42,7 @@ $(document).ready(function(){
 			$("input#logradouro").val( result.address );
 		});
 	});
-	$(":file").filestyle({
+	$(".file").filestyle({
 		buttonText: "Selecionar Imagem"
 	});
 });

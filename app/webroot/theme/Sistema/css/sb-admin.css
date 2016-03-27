@@ -39,14 +39,13 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 	border-radius: 2px;
 }
 .panel-black{
-	background:#333 !important;
+	background:#000 !important;
 	padding:15px;
 	border:0px;
 }
 .panel-primary{
 	border-color: #ccc;
 }
-
 .box-body{
 	clear:both;
 	padding:10px 0px;
@@ -56,7 +55,6 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 	color: #a94442;
 	font-weight: bold;
 }
-
 .box-title {
 	display: inline-block;
 	padding: 10px 10px 10px 10px;
@@ -67,17 +65,11 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 	float: left;
 	cursor: default;
 }
-.vezes{
-	font-size: 3.5em;
-	text-align: center;
-	margin: 0 auto;
-}
 .error-message{
 	font-size:12px;
 	color:#a94442;
 	font-weight:bold;
 }
-
 /* Global Styles */
 
 body {
@@ -198,7 +190,7 @@ ul.alert-dropdown {
 		border: none;
 		border-radius: 0;
 		overflow-y: auto;
-		background-color: #222;
+		background-color: #000;
 		bottom: 0;
 		overflow-x: hidden;
 		padding-bottom: 40px;
@@ -211,7 +203,7 @@ ul.alert-dropdown {
 	.side-nav li a:hover,
 	.side-nav li a:focus {
 		outline: none;
-		background-color: #000 !important;
+		background-color: #222 !important;
 	}
 }
 
@@ -303,7 +295,7 @@ ul.alert-dropdown {
 }
 
 .footer{
-	background:#222;
+	background:#000;
 }
 .footer p{
 	color:#fff;
@@ -314,4 +306,7 @@ ul.alert-dropdown {
 .footer a{
 	color:#fff;
 	text-decoration:underline;
+}
+.navbar-inverse{
+	background:#000;
 }
