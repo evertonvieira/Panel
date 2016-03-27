@@ -66,7 +66,7 @@ class PagesController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Page->exists($id)) {
-			throw new NotFoundException(__('Invalid page'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		$options = array('conditions' => array('Page.' . $this->Page->primaryKey => $id));
 		$this->set('page', $this->Page->find('first', $options));
@@ -93,7 +93,7 @@ class PagesController extends AppController {
 	public function admin_view($id = null) {
 		$this->pageTitle = 'Ver Página';
 		if (!$this->Page->exists($id)) {
-			throw new NotFoundException(__('Invalid page'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		$options = array('conditions' => array('Page.' . $this->Page->primaryKey => $id));
 		$this->set('page', $this->Page->find('first', $options));
@@ -109,10 +109,10 @@ class PagesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Page->create();
 			if ($this->Page->save($this->request->data)) {
-				$this->Session->setFlash(__('The page has been saved'), 'flash/success');
+				$this->Session->setFlash(__('A página foi <strong>cadastrada</strong> com sucesso!'), 'flash/success');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The page could not be saved. Please, try again.'), 'flash/error');
+				$this->Session->setFlash(__('Não foi possivel <strong>cadastrar</strong> a página. Por favor, tente novamente.'), 'flash/error');
 			}
 		}
 	}
@@ -128,14 +128,14 @@ class PagesController extends AppController {
 		$this->pageTitle = 'Editar Página';
 		$this->Page->id = $id;
 		if (!$this->Page->exists($id)) {
-			throw new NotFoundException(__('Invalid page'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Page->save($this->request->data)) {
-				$this->Session->setFlash(__('The page has been saved'), 'flash/success');
+				$this->Session->setFlash(__('A página foi <strong>editada</strong> com sucesso!'), 'flash/success');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The page could not be saved. Please, try again.'), 'flash/error');
+				$this->Session->setFlash(__('Não foi possivel <strong>editar</strong> a página. Por favor, tente novamente.'), 'flash/error');
 			}
 		} else {
 			$options = array('conditions' => array('Page.' . $this->Page->primaryKey => $id));
@@ -157,13 +157,13 @@ class PagesController extends AppController {
 		}
 		$this->Page->id = $id;
 		if (!$this->Page->exists()) {
-			throw new NotFoundException(__('Invalid page'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		if ($this->Page->delete()) {
-			$this->Session->setFlash(__('Page deleted'), 'flash/success');
+			$this->Session->setFlash(__('A página foi <strong>deletada</strong> com sucesso!'), 'flash/success');
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Page was not deleted'), 'flash/error');
+		$this->Session->setFlash(__('Não foi possivel <strong>deletar</strong> a página. Por favor, tente novamente.'), 'flash/error');
 		$this->redirect(array('action' => 'index'));
 	}
 }

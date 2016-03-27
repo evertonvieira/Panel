@@ -37,7 +37,7 @@ class NewsController extends AppController {
 	public function view($id = null) {
 		$this->News->recursive = 2;
 		if (!$this->News->exists($id)) {
-			throw new NotFoundException(__('Invalid news'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		$options = array('conditions' => array('News.' . $this->News->primaryKey => $id));
 		$this->set('news', $this->News->find('first', $options));
@@ -64,7 +64,7 @@ class NewsController extends AppController {
 	public function admin_view($id = null) {
 		$this->pageTitle = 'Ver Post';
 		if (!$this->News->exists($id)) {
-			throw new NotFoundException(__('Invalid news'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		$options = array('conditions' => array('News.' . $this->News->primaryKey => $id));
 		$this->set('news', $this->News->find('first', $options));
@@ -90,7 +90,6 @@ class NewsController extends AppController {
 				$data['Category'] = $this->data['Category'];
 
 				// Valida os dados da imagem com relação ao banco de dados
-
 				$this->News->set($this->request->data);
 				if( !$this->News->validates() ) {
 					$result = 'error';
@@ -104,7 +103,6 @@ class NewsController extends AppController {
 				if(!$valida){
 					$result = 'error';
 				}
-
 				if($valida){
 					$this->News->create();
 					if ($this->News->save( $data ) ) {
@@ -118,19 +116,20 @@ class NewsController extends AppController {
 							'dir'     => 'News',
 						);
 						$upload = $this->Upload->image($this->request->data['News']['imagem'], $options);
-						$this->Session->setFlash(__('The news has been saved'), 'flash/success');
+						$this->Session->setFlash(__('O post foi <strong>cadastrada</strong> com sucesso!'), 'flash/success');
 						$this->redirect(array('action' => 'index'));
 					} else {
-						$this->Session->setFlash(__('The club could not be saved. Please, try again.'), 'flash/error');
+						$this->Session->setFlash(__('Não foi possivel <strong>cadastrar</strong> a postagem. Por favor, tente novamente.'), 'flash/error');
 					}
 				}
 			}else{
 				$this->News->create();
 				if ($this->News->save($this->request->data)) {
-					$this->Session->setFlash(__('The news has been saved'), 'flash/success');
+					$this->Session->setFlash(__('O post foi <strong>cadastrado</strong> com sucesso!'), 'flash/success');
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash(__('The news could not be saved. Please, try again.'), 'flash/error');
+					$this->Session->setFlash(__('Não foi possivel <strong>cadastrar</strong> a postagem. Por favor, tente novamente.'), 'flash/error');
+
 				}
 			}
 		}
@@ -149,7 +148,7 @@ class NewsController extends AppController {
 		$this->pageTitle = 'Editar Post';
 		$this->News->id = $id;
 		if (!$this->News->exists($id)) {
-			throw new NotFoundException(__('Invalid news'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 
@@ -184,13 +183,12 @@ class NewsController extends AppController {
 					$upload = $this->Upload->image($this->request->data['News']['imagem'], $options);
 				}
 			}
-
-
 			if ($this->News->save($this->request->data)) {
-				$this->Session->setFlash(__('The news has been saved'), 'flash/success');
+				$this->Session->setFlash(__('O post foi <strong>editado</strong> com sucesso!'), 'flash/success');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The news could not be saved. Please, try again.'), 'flash/error');
+				$this->Session->setFlash(__('Não foi possivel <strong>editar</strong> a postagem. Por favor, tente novamente.'), 'flash/error');
+
 			}
 		} else {
 			$options = array('conditions' => array('News.' . $this->News->primaryKey => $id));
@@ -214,13 +212,14 @@ class NewsController extends AppController {
 		}
 		$this->News->id = $id;
 		if (!$this->News->exists()) {
-			throw new NotFoundException(__('Invalid news'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		if ($this->News->delete()) {
-			$this->Session->setFlash(__('News deleted'), 'flash/success');
+			$this->Session->setFlash(__('O post foi <strong>deletado</strong> com sucesso!'), 'flash/success');
+
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('News was not deleted'), 'flash/error');
+		$this->Session->setFlash(__('Não foi possível <strong>deletar</strong> o post. Por favor, tente novamente.'), 'flash/success');
 		$this->redirect(array('action' => 'index'));
 	}
 }

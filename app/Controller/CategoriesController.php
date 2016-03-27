@@ -36,7 +36,7 @@ class CategoriesController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Category->exists($id)) {
-			throw new NotFoundException(__('Invalid category'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o <strong>ID</strong> especificado!'));
 		}
 		$options = array('conditions' => array('Category.' . $this->Category->primaryKey => $id));
 		$this->set('category', $this->Category->find('first', $options));
@@ -63,7 +63,8 @@ class CategoriesController extends AppController {
 	public function admin_view($id = null) {
 		$this->pageTitle = 'Ver Categoria';
 		if (!$this->Category->exists($id)) {
-			throw new NotFoundException(__('Invalid category'));
+			//throw new NotFoundException(__('Invalid category'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		$options = array('conditions' => array('Category.' . $this->Category->primaryKey => $id));
 		$this->set('category', $this->Category->find('first', $options));
@@ -79,10 +80,10 @@ class CategoriesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Category->create();
 			if ($this->Category->save($this->request->data)) {
-				$this->Session->setFlash(__('The category has been saved'), 'flash/success');
+				$this->Session->setFlash(__('A categoria foi <strong>cadastrada</strong> com sucesso!'), 'flash/success');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The category could not be saved. Please, try again.'), 'flash/error');
+				$this->Session->setFlash(__('Não foi possível realizar o <strong>cadastro</strong> da categoria. Por favor, tente novamente.'), 'flash/error');
 			}
 		}
 	}
@@ -98,14 +99,14 @@ class CategoriesController extends AppController {
 		$this->pageTitle = 'Editar Categorias';
 		$this->Category->id = $id;
 		if (!$this->Category->exists($id)) {
-			throw new NotFoundException(__('Invalid category'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Category->save($this->request->data)) {
-				$this->Session->setFlash(__('The category has been saved'), 'flash/success');
+				$this->Session->setFlash(__('A categoria foi <strong>editada</strong> com sucesso!'), 'flash/success');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The category could not be saved. Please, try again.'), 'flash/error');
+				$this->Session->setFlash(__('Não foi possível <strong>editar</strong> a categoria. Por favor, tente novamente.'), 'flash/error');
 			}
 		} else {
 			$options = array('conditions' => array('Category.' . $this->Category->primaryKey => $id));
@@ -127,13 +128,13 @@ class CategoriesController extends AppController {
 		}
 		$this->Category->id = $id;
 		if (!$this->Category->exists()) {
-			throw new NotFoundException(__('Invalid category'));
+			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		if ($this->Category->delete()) {
-			$this->Session->setFlash(__('Category deleted'), 'flash/success');
+			$this->Session->setFlash(__('A categoria foi <strong>deletada</strong> com sucesso!'), 'flash/success');
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Category was not deleted'), 'flash/error');
+		$this->Session->setFlash(__('Não foi possível <strong>deletar</strong> a categoria especificada. Por favor, tente novomente.'), 'flash/error');
 		$this->redirect(array('action' => 'index'));
 	}
 }
