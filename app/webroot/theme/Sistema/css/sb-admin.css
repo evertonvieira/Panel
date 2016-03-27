@@ -99,6 +99,7 @@ body {
 
 #page-wrapper {
 	width: 100%;
+	min-height:200px;
 	padding: 0;
 	background-color: #fff;
 }
@@ -115,6 +116,7 @@ body {
 
 	#page-wrapper {
 		padding: 10px;
+		min-height:600px;
 	}
 }
 
@@ -300,4 +302,18 @@ ul.alert-dropdown {
 
 .panel-yellow > a:hover {
 	color: #df8a13;
+}
+
+.footer{
+	background:#222;
+}
+.footer p{
+	color:#fff;
+	font-size:12px;
+	padding:15px 0px 0px 0px;
+	text-align:right;
+}
+.footer a{
+	color:#fff;
+	text-decoration:underline;
 }

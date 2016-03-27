@@ -49,7 +49,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					<div class="row">
 						<aside class="right-side">
 						<div class="col-lg-12">
-
 							<section class="content-header">
 								<h1>
 									<?php echo $title_for_layout; ?> <small>Control panel</small>
@@ -66,6 +65,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					</div>
 				</div>
 			</div>
+			<?php echo $this->element("footer"); ?>
     </div>
 	</body>
 </html>
