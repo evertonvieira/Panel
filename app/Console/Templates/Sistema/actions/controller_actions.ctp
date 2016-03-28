@@ -25,6 +25,7 @@
  * @return void
  */
 	public function <?php echo $admin ?>index() {
+		$this->pageTitle = 'Listar';
 		$this-><?php echo $currentModelName ?>->recursive = 0;
 		$this->set('<?php echo $pluralName ?>', $this->paginate());
 	}
@@ -37,6 +38,7 @@
  * @return void
  */
 	public function <?php echo $admin ?>view($id = null) {
+		$this->pageTitle = 'Ver ';
 		if (!$this-><?php echo $currentModelName; ?>->exists($id)) {
 			throw new NotFoundException(__('Invalid <?php echo strtolower($singularHumanName); ?>'));
 		}
@@ -51,6 +53,7 @@
  * @return void
  */
 	public function <?php echo $admin ?>add() {
+		$this->pageTitle = '';
 		if ($this->request->is('post')) {
 			$this-><?php echo $currentModelName; ?>->create();
 			if ($this-><?php echo $currentModelName; ?>->save($this->request->data)) {
@@ -92,7 +95,8 @@
  * @return void
  */
 	public function <?php echo $admin; ?>edit($id = null) {
-        $this-><?php echo $currentModelName; ?>->id = $id;
+		$this->pageTitle = 'Listar Categorias';
+		$this-><?php echo $currentModelName; ?>->id = $id;
 		if (!$this-><?php echo $currentModelName; ?>->exists($id)) {
 			throw new NotFoundException(__('Invalid <?php echo strtolower($singularHumanName); ?>'));
 		}

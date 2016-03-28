@@ -20,7 +20,6 @@
 	<div class="col-xs-12">
     <div class="box box-primary">
 			<div class="box-header">
-				<h3 class="box-title"><?php echo "<?php echo __('{$pluralHumanName}'); ?>"; ?></h3>
 				<div class="box-tools pull-right">
 					<?php echo "<?php echo \$this->Html->link(__('<i class=\"glyphicon glyphicon-plus\"></i> New ".$singularHumanName."'), array('action' => 'add'), array('class' => 'btn btn-primary', 'escape' => false)); ?>\n"; ?>
 				</div>
