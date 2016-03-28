@@ -22,12 +22,12 @@
 					<tbody>
 						<?php foreach ($pages as $page): ?>
 							<tr>
-								<td class="text-left"><?php echo h($page['Page']['id']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo h($page['Page']['title']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo h($page['Page']['slug']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['created']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['modified']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $this->Formatacao->visivel($page['Page']['status']); ?>&nbsp;</td>
+								<td class="text-left"><?php echo h($page['Page']['id']); ?></td>
+								<td class="text-left"><?php echo h($page['Page']['title']); ?></td>
+								<td class="text-left"><?php echo h($page['Page']['slug']); ?></td>
+								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['created']); ?></td>
+								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['modified']); ?></td>
+								<td class="text-left"><?php echo $this->Formatacao->visivel($page['Page']['status']); ?></td>
 								<td class="text-left">
 									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('action' => 'view', $page['Page']['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>
 									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-pencil"></i>'), array('action' => 'edit', $page['Page']['id']), array('class' => 'btn btn-warning btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'edit')); ?>

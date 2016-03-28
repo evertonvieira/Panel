@@ -24,14 +24,14 @@
 					<tbody>
 						<?php foreach ($news as $news): ?>
 							<tr>
-								<td class="text-left"><?php echo h($news['News']['id']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo h($news['News']['title']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo h($news['News']['slug']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $news['News']['data']; ?>&nbsp;</td>
-								<td class="text-left"><?php echo $this->Formatacao->visivel($news['News']['status']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $this->Formatacao->featured($news['News']['featured']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $this->Formatacao->dataHora($news['News']['created']); ?>&nbsp;</td>
-								<td class="text-left"><?php echo $this->Formatacao->dataHora($news['News']['updated']); ?>&nbsp;</td>
+								<td class="text-left"><?php echo h($news['News']['id']); ?></td>
+								<td class="text-left"><?php echo h($news['News']['title']); ?></td>
+								<td class="text-left"><?php echo h($news['News']['slug']); ?></td>
+								<td class="text-left"><?php echo $news['News']['data']; ?></td>
+								<td class="text-left"><?php echo $this->Formatacao->visivel($news['News']['status']); ?></td>
+								<td class="text-left"><?php echo $this->Formatacao->featured($news['News']['featured']); ?></td>
+								<td class="text-left"><?php echo $this->Formatacao->dataHora($news['News']['created']); ?></td>
+								<td class="text-left"><?php echo $this->Formatacao->dataHora($news['News']['updated']); ?></td>
 								<td class="text-left">
 									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-picture"></i>'), array('controller'=>'news','action' => 'images', $news['News']['id']), array('class' => 'btn btn-info btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>
 									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('action' => 'view', $news['News']['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>

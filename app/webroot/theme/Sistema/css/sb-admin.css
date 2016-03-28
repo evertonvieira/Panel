@@ -39,7 +39,7 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 	border-radius: 2px;
 }
 .panel-black{
-	background:#000 !important;
+	background:#00A2B5 !important;
 	padding:15px;
 	border:0px;
 }
@@ -321,12 +321,10 @@ ul.alert-dropdown {
 	background:#00A2B5;
 }
 .table-striped>tbody>tr:nth-of-type(odd):hover{
-	background:#00A2B5;
-	color:#fff !important;
+	background:#D4D6DE;
 }
 .table-striped>tbody>tr:nth-of-type(even):hover{
-	background:#00A2B5;
-	color:#fff !important;
+	background:#D4D6DE;
 }
 .navbar-inverse .navbar-brand, .top-nav>li>a{
 	color:#fff !important;
