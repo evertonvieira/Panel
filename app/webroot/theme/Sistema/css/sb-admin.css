@@ -207,6 +207,16 @@ ul.alert-dropdown {
 	}
 }
 
+@media(max-width:768px) {
+	.navbar-inverse .navbar-nav>li a, .navbar-inverse .navbar-text{
+		color:#fff !important;
+	}
+	.navbar-inverse .navbar-nav>li a:hover{
+		background:#000;
+	}
+
+}
+
 .side-nav>li>ul {
 	padding: 0;
 }
@@ -308,5 +318,19 @@ ul.alert-dropdown {
 	text-decoration:underline;
 }
 .navbar-inverse{
-	background:#000;
+	background:#00A2B5;
+}
+.table-striped>tbody>tr:nth-of-type(odd):hover{
+	background:#00A2B5;
+	color:#fff !important;
+}
+.table-striped>tbody>tr:nth-of-type(even):hover{
+	background:#00A2B5;
+	color:#fff !important;
+}
+.navbar-inverse .navbar-brand, .top-nav>li>a{
+	color:#fff !important;
+}
+.even{
+	background:#eee;
 }
