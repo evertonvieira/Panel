@@ -285,7 +285,7 @@ class FormatacaoHelper extends AppHelper {
       '<span class="label label-primary">Sim</span>':
       '<span class="label label-danger">Não</span>';
     }
-    return ($status == 'Ativo')?1:0;
+    return ($status == 'Sim')?1:0;
 
 	}
 	//sexo do jogador
@@ -299,32 +299,6 @@ class FormatacaoHelper extends AppHelper {
     return ($status == 'Masculino')?1:0;
 
 	}
-
-	//escolaridade
-	function escolaridade($status) {
-
-    switch ($status){
-			case 0:
-				return "Fundamental";
-				break;
-			case 1:
-				return "Médio";
-				break;
-			case 2:
-				return "Superior";
-				break;
-			case 3:
-				return "Outros";
-				break;
-			default:
-
-		}
-
-
-
-	}
-
-
 
 
 
