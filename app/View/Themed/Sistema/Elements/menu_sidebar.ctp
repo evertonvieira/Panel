@@ -4,12 +4,13 @@
   $menus = array();
   foreach ($menu['MenuSection'] as $section){
     if( count($section['MenuSectionLink'])>0 ){
-      $menus['sessoes'][ $section['id'] ] = array( 'label'=> $section['name'] );
+      $menus['sessoes'][ $section['id'] ] = array( 'label'=> $section['name'], 'icon'=>$section['icon']);
       foreach ( $section['MenuSectionLink'] as $link){
       $params = Router::parse( $link['alias']);
         $menus['sessoes'][ $section['id'] ]['links'][] = array(
           'alias'=> $link['alias'],
           'label'=>__( $link['name'] ),
+          'icon'=>__( $link['icon'] ),
           'link'=> $params,
           'title'=>__("Languages")
         );
@@ -37,16 +38,15 @@
 			?>
 			<li>
 				<a href="#collapse<?php echo $k; ?>" data-toggle="collapse" data-parent="#accordion">
-					<?=$menu['label'];?> <i class="fa fa-fw fa-caret-down"></i>
+					<?php if($menu['icon']) echo "<span class=\"glyphicon {$this->Formatacao->icon($menu['icon'])}\" aria-hidden=\"true\"></span>";?> <?=$menu['label'];?> <i class="fa fa-fw fa-caret-down"></i>
 				</a>
 				<ul id="collapse<?php echo $k; ?>" class="collapse">
 					<li>
 						<?php foreach( $menu['links'] as $link){ ?>
 							<?php
-								echo $this->Html->link(
-									$link['label'],
+								echo $this->Html->link("<span class=\"glyphicon {$this->Formatacao->icon($link['icon'])}\" aria-hidden=\"true\"></span>  {$link['label']}",
 									$link['link'],
-									array('title'=>$link['title'] )
+									array('title'=>$link['title'], 'escape'=> false, )
 								);
 							?>
 						<?php } ?>
@@ -54,6 +54,7 @@
 				</ul>
 			</li>
 		<?php endforeach; ?>
+		<li><?php echo $this->Html->link('<span class="glyphicon glyphicon-home" aria-hidden="true"></span> Visualizar o site', array('controller'=>'pages', 'action'=>'index', 'admin'=>false, 'plugin'=>false),array('title'=>'Visualizar o site', 'target'=>'_blank', 'escape'=>false));?></li>
 	</ul>
 </div>
 

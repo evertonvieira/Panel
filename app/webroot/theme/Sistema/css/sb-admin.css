@@ -27,6 +27,27 @@ input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between c
 input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
 input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
 
+.bs-glyphicons-list{
+	padding:0px;
+	list-style:none;
+}
+.bs-glyphicons .glyphicon {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+.bs-glyphicons .glyphicon-class {
+	display: block;
+	text-align: center;
+	word-wrap: break-word;
+}
+.block-icon input[type=radio]{
+	margin:5px !important;
+}
+.block-icon label{
+	margin-right:10px;
+}
+
 .content-header {
 	padding: 1px 0px;
 	margin:10px 0px;
@@ -86,6 +107,10 @@ body {
 @media(min-width:768px) {
 	body {
 		margin-top: 50px;
+	}
+	.bs-glyphicons li {
+    width: 12.5%;
+    font-size: 12px;
 	}
 }
 .right-side > .col-lg-12{

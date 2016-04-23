@@ -42,7 +42,7 @@ class MenusController extends AppController {
 		$this->Menu->recursive = 0;
 
     $this->paginate = array(
-      'limit' => 10
+      'limit' => 100
     );
 
 		$this->set('menus', $this->paginate());
