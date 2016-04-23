@@ -34,16 +34,6 @@ class Category extends AppModel {
 				'message' => 'Já existe uma categoria com este título!'
 			)
 		),
-		'description' => array(
-			'notBlank' => array(
-				'rule' => array('notBlank'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 	);
 
 	// The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -66,6 +56,20 @@ class Category extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
+		)
+	);
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'ParentCategory' => array(
+			'className' => 'Category',
+			'foreignKey' => 'parent_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 

@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('Folder', 'Utility');
 /**
  * Categories Controller
  *
@@ -22,35 +23,22 @@ class CategoriesController extends AppController {
  *
  * @return void
  */
-	public function index() {
-		$this->Category->recursive = 0;
-		$this->set('categories', $this->paginate());
-	}
-
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function view($id = null) {
-		if (!$this->Category->exists($id)) {
-			throw new NotFoundException(__('Não foi encontrado o registro para o <strong>ID</strong> especificado!'));
-		}
-		$options = array('conditions' => array('Category.' . $this->Category->primaryKey => $id));
-		$this->set('category', $this->Category->find('first', $options));
-	}
-
-/**
- * admin_index method
- *
- * @return void
- */
 	public function admin_index() {
-		$this->pageTitle = 'Listar Categorias';
 		$this->Category->recursive = 0;
 		$this->set('categories', $this->paginate());
+	}
+
+
+/**
+ * getParent method
+ *
+ * @return void
+ * retornas as categorias filhas
+ */
+	public function getChildren($id) {
+		$this->Category->recursive = 0;
+		$Children  = $this->Category->find('all', array('conditions'=> array('Category.parent_id'=> $id )));
+		return $Children;
 	}
 
 /**
@@ -63,7 +51,6 @@ class CategoriesController extends AppController {
 	public function admin_view($id = null) {
 		$this->pageTitle = 'Ver Categoria';
 		if (!$this->Category->exists($id)) {
-			//throw new NotFoundException(__('Invalid category'));
 			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
 		}
 		$options = array('conditions' => array('Category.' . $this->Category->primaryKey => $id));
@@ -86,6 +73,9 @@ class CategoriesController extends AppController {
 				$this->Session->setFlash(__('Não foi possível realizar o <strong>cadastro</strong> da categoria. Por favor, tente novamente.'), 'flash/error');
 			}
 		}
+		$parents = $this->Category->ParentCategory->find('list');
+		$this->set(compact('parents'));
+		$this->__set_views_and_layouts();
 	}
 
 /**
@@ -112,6 +102,10 @@ class CategoriesController extends AppController {
 			$options = array('conditions' => array('Category.' . $this->Category->primaryKey => $id));
 			$this->request->data = $this->Category->find('first', $options);
 		}
+		$parents = $this->Category->ParentCategory->find('list');
+		$this->set(compact('parents'));
+		$this->__set_category($id);
+    $this->__set_views_and_layouts();
 	}
 
 /**
@@ -137,4 +131,49 @@ class CategoriesController extends AppController {
 		$this->Session->setFlash(__('Não foi possível <strong>deletar</strong> a categoria especificada. Por favor, tente novomente.'), 'flash/error');
 		$this->redirect(array('action' => 'index'));
 	}
+
+	/**
+ * admin_list_view_and_layout method
+ *
+ * @return array $data['view'] $data['layout']
+ */
+  private function __set_views_and_layouts() {
+    $dir = new Folder( APP . 'View' . DS . 'Themed'. DS . $this->theme . DS . 'Categories' . DS );
+    $_views = $dir->find('.*\.ctp');
+    $views = array();
+    foreach($_views as $_view){
+      $views[$_view] = $_view;
+    }
+    $dir = new Folder( APP . 'View' . DS . 'Themed'. DS . $this->theme . DS . 'Layouts'. DS );
+    $_layouts = $dir->find('.*\.ctp');
+    $layouts = array();
+    $excludes = array('error.ctp','ajax.ctp','flash.ctp');
+    foreach($_layouts as $_layout){
+      if(!in_array($_layout, $excludes)) $layouts[$_layout] = $_layout;
+    }
+    $this->set('views', $views );
+    $this->set('layouts', $layouts );
+  }
+
+
+/**
+ * set_page method
+ *
+ * @return void
+ */
+  private function __set_category( $id = null ) {
+
+    $options = array('conditions' => array('Category.' . $this->Category->primaryKey => $id));
+    $category = $this->Category->find('first', $options);
+
+    if($this->action == 'admin_edit'){
+      $this->request->data = $this->Category->find('first', $options);
+    }
+
+    if($this->action == 'admin_view'){
+      $this->set(compact('category'));
+    }
+  }
+
+
 }
