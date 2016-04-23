@@ -14,7 +14,7 @@
 							<th class="text-left"><?php echo __("title"); ?></th>
 							<th class="text-left"><?php echo __("slug"); ?></th>
 							<th class="text-left"><?php echo __("created"); ?></th>
-							<th class="text-left"><?php echo __("modified"); ?></th>
+							<th class="text-left"><?php echo __("updated"); ?></th>
 							<th class="text-left"><?php echo __("status"); ?></th>
 							<th width="60" class="text-left"><?php echo __('Actions'); ?></th>
 						</tr>
@@ -26,7 +26,7 @@
 								<td class="text-left"><?php echo h($page['Page']['title']); ?></td>
 								<td class="text-left"><?php echo h($page['Page']['slug']); ?></td>
 								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['created']); ?></td>
-								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['modified']); ?></td>
+								<td class="text-left"><?php echo $this->Formatacao->dataHora($page['Page']['updated']); ?></td>
 								<td class="text-left"><?php echo $this->Formatacao->visivel($page['Page']['status']); ?></td>
 								<td class="text-left">
 									<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('action' => 'view', $page['Page']['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>

@@ -46,9 +46,9 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong><?php echo __('Modified'); ?></strong></td>
+							<td><strong><?php echo __('Updated'); ?></strong></td>
 							<td>
-								<?php echo $this->Formatacao->dataCompleta($page['Page']['modified']); ?>
+								<?php echo $this->Formatacao->dataCompleta($page['Page']['updated']); ?>
 								&nbsp;
 							</td>
 						</tr>

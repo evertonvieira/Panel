@@ -11,7 +11,7 @@ class Page extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'title';
+	public $displayField = 'slug';
 
 /**
  * Validation rules
@@ -34,4 +34,43 @@ class Page extends AppModel {
 			)
 		),
 	);
+
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'ParentPage' => array(
+			'className' => 'Page',
+			'foreignKey' => 'parent_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'ChildPage' => array(
+			'className' => 'Page',
+			'foreignKey' => 'parent_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
 }

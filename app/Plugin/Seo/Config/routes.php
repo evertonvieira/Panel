@@ -1,0 +1,11 @@
+<?php
+  Router::connect(
+    '/admin/meta_tags/:action',
+    array(
+      'plugin'=>'seo',
+      'controller'=>'meta_tags',
+      'action'=>'config',
+      'prefix'=>'admin',
+    ),
+    array()
+  );

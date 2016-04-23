@@ -18,7 +18,7 @@ class AppModel extends Model {
    *
    * @actsAs string
 	*/
-  public $actsAs = array('AjusteData', 'Images.Images');
+  public $actsAs = array('AjusteData', 'Images.Images', 'Seo.Seo');
 
 	public function beforeValidate($options = array()) {
 		if (isset($this->data[$this->name]['title'])){

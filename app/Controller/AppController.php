@@ -54,7 +54,7 @@ class AppController extends Controller {
     'Amanager.Amanager',
     'Formatacao',
     'Plupload.Plupload',
-    //'Seo.Seo',
+    'Seo.Seo',
   );
 
   public function beforeFilter(){

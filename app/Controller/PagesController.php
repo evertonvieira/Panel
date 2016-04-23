@@ -19,7 +19,6 @@ class PagesController extends AppController {
 
 	public function display() {
 		$path = func_get_args();
-
 		$count = count($path);
 		if (!$count) {
 			return $this->redirect('/');
@@ -64,12 +63,17 @@ class PagesController extends AppController {
  * @param string $id
  * @return void
  */
-	public function view($id = null) {
-		if (!$this->Page->exists($id)) {
-			throw new NotFoundException(__('Não foi encontrado o registro para o ID especificado!'));
-		}
-		$options = array('conditions' => array('Page.' . $this->Page->primaryKey => $id));
-		$this->set('page', $this->Page->find('first', $options));
+	public function view($slug = null) {
+		$seo = $page = $this->Page->findBySlug($slug);
+    if(!$page){
+			throw new NotFoundException(__('Invalid Page'));
+    }
+    $_page = $this->Page->read(null,  $page['Page']['id'] );
+    $this->set('page', $_page);
+    $this->set('seo', $seo);
+    $_page['Page']['view'] = str_replace('.ctp','', $_page['Page']['view']);
+    $this->render($_page['Page']['view']);
+    $this->layout = $_page['Page']['layout'];
 	}
 
 /**
@@ -105,7 +109,7 @@ class PagesController extends AppController {
  * @return void
  */
 	public function admin_add() {
-		$this->pageTitle = 'Adicinar Página';
+		$this->pageTitle = 'Adicionar Página';
 		if ($this->request->is('post')) {
 			$this->Page->create();
 			if ($this->Page->save($this->request->data)) {
@@ -115,6 +119,9 @@ class PagesController extends AppController {
 				$this->Session->setFlash(__('Não foi possivel <strong>cadastrar</strong> a página. Por favor, tente novamente.'), 'flash/error');
 			}
 		}
+		$parents = $this->Page->ParentPage->find('list');
+		$this->set(compact('parents'));
+    $this->__set_views_and_layouts();
 	}
 
 /**
@@ -138,10 +145,57 @@ class PagesController extends AppController {
 				$this->Session->setFlash(__('Não foi possivel <strong>editar</strong> a página. Por favor, tente novamente.'), 'flash/error');
 			}
 		} else {
-			$options = array('conditions' => array('Page.' . $this->Page->primaryKey => $id));
-			$this->request->data = $this->Page->find('first', $options);
+      $this->__set_page($id);
 		}
+		$parents = $this->Page->ParentPage->find('list');
+		$this->set(compact('parents'));
+    $this->__set_views_and_layouts();
 	}
+
+/**
+ * admin_list_view_and_layout method
+ *
+ * @return array $data['view'] $data['layout']
+ */
+  private function __set_views_and_layouts() {
+    $dir = new Folder( APP . 'View' . DS . 'Themed'. DS . $this->theme . DS . 'Pages' . DS );
+    $_views = $dir->find('.*\.ctp');
+    $views = array();
+    foreach($_views as $_view){
+      $views[$_view] = $_view;
+    }
+    $dir = new Folder( APP . 'View' . DS . 'Themed'. DS . $this->theme . DS . 'Layouts'. DS );
+    $_layouts = $dir->find('.*\.ctp');
+    $layouts = array();
+    $excludes = array('error.ctp','ajax.ctp','flash.ctp');
+    foreach($_layouts as $_layout){
+      if(!in_array($_layout, $excludes)) $layouts[$_layout] = $_layout;
+    }
+    $this->set('views', $views );
+    $this->set('layouts', $layouts );
+  }
+
+
+/**
+ * set_page method
+ *
+ * @return void
+ */
+  private function __set_page( $id = null ) {
+
+    $options = array('conditions' => array('Page.' . $this->Page->primaryKey => $id));
+    $page = $this->Page->find('first', $options);
+
+    if($this->action == 'admin_edit'){
+      $this->request->data = $this->Page->find('first', $options);
+    }
+
+    if($this->action == 'admin_view'){
+      $this->set(compact('page'));
+    }
+  }
+
+
 
 /**
  * admin_delete method
