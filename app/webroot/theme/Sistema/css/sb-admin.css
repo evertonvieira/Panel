@@ -18,6 +18,7 @@ input, textarea, select{
 	-moz-border-radius:0px !important;
   -webkit-border-radius:0px !important;
   border-radius:0px !important;
+	background-color:#ddd !important;
 }
 
 

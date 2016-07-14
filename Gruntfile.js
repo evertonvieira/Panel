@@ -74,7 +74,7 @@ module.exports = function (grunt) {
 				files: [
 				 'app/webroot/theme/Sistema/css/sb-admin.css',
 				],
-				tasks: [ 'concat:css', 'cssmin' ],
+				tasks: [ 'default' ],
 				options: {
 					interrupt: true,
 				},
