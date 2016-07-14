@@ -14,62 +14,43 @@
 	<?php if ($this->Amanager->is_logged()): ?>
 		<!-- Top Menu Items -->
 		<ul class="nav navbar-right top-nav">
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-				<ul class="dropdown-menu message-dropdown">
-					<li class="message-preview">
-						<a href="#">
-							<div class="media">
-								<span class="pull-left">
-									<img class="media-object" src="http://placehold.it/50x50" alt="">
-								</span>
-								<div class="media-body">
-									<h5 class="media-heading">
-										<strong>John Smith</strong>
-									</h5>
-									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-									<p>Lorem ipsum dolor sit amet, consectetur...</p>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="message-preview">
-						<a href="#">
-							<div class="media">
-								<span class="pull-left">
-									<img class="media-object" src="http://placehold.it/50x50" alt="">
-								</span>
-								<div class="media-body">
-									<h5 class="media-heading">
-										<strong></strong>
-									</h5>
-									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-									<p>Lorem ipsum dolor sit amet, consectetur...</p>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="message-preview">
-						<a href="#">
-							<div class="media">
-								<span class="pull-left">
-									<img class="media-object" src="http://placehold.it/50x50" alt="">
-								</span>
-								<div class="media-body">
-									<h5 class="media-heading">
-										<strong>John Smith</strong>
-									</h5>
-									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-									<p>Lorem ipsum dolor sit amet, consectetur...</p>
-								</div>
-						</div>
-						</a>
-					</li>
-					<li class="message-footer">
-							<a href="#">Read All New Messages</a>
-					</li>
-				</ul>
-			</li>
+			<?php $total = $this->RequestAction("contacts/totalMensage");
+				if ($total){
+			?>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle info-number" data-toggle="dropdown"><i class="fa fa-envelope"></i>
+						<span class="badge bg-red">
+							<?php echo $total; ?>
+						</span>
+					</a>
+					<?php $data = $this->RequestAction("contacts/notifications");?>
+					<ul class="dropdown-menu message-dropdown">
+						<?php foreach ($data as $msg):?>
+							<li class="message-preview">
+								<a href="<?php echo $this->Html->url('/', true)?>admin/contacts/view/<?=$msg['Contact']['id'];?>">
+									<div class="media">
+										<div class="media-body">
+											<h5 class="media-heading">
+												<strong>
+													<?php if (empty($msg['Contact']['message'])):?>
+														<span data-toggle="tooltip" data-placement="right" title="Telefone: <?=$msg['Contact']['phone'];?>" class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+													<?php endif;?>
+													<?=$msg['Contact']['name'];?>
+												</strong>
+											</h5>
+											<p class="small badge text-muted"><i class="fa fa-clock-o"></i> <?=$this->Formatacao->tempo($msg['Contact']['created']);?></p>
+											<p class="text-body"><?=$this->Formatacao->LimitaCaracter($msg['Contact']['message'], 80);?></p>
+										</div>
+									</div>
+								</a>
+							</li>
+						<?php endforeach;?>
+						<li class="message-footer">
+							<?php echo $this->Html->link('Leia todas as mensagens', array('controller'=>'contacts', 'action'=>'index', 'admin'=>true, 'plugin'=>false),array('title'=>'Leia todas as novas mensagens', 'escape'=>false));?>
+						</li>
+					</ul>
+				</li>
+			<?php } ?>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
 				<ul class="dropdown-menu alert-dropdown">
@@ -101,6 +82,12 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $this->Amanager->get_user_info('name');?> <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li class="divider"></li>
+					<li>
+						<?php
+							echo $this->Html->link('<i class="fa fa-fw fa-cog"></i> Configurações',	array('controller'=> 'settings',	'action'=>'index', 'admin'=>true),
+							array('escape' => false, 'title' => 'Configurações'));
+						?>
+					</li>
 					<li>
 						<?php
 							echo $this->Html->link('<i class="fa fa-fw fa-power-off"></i> Log Out',	array('controller'=> 'users',	'action'=>'logout',	'plugin'=>'amanager', 'admin'=>false),

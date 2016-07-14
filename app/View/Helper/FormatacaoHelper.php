@@ -486,4 +486,19 @@ class FormatacaoHelper extends AppHelper {
 			endif;
 		}
 	}
+
+	function LimitaCaracter($texto, $limite){
+		$contador = strlen($texto);
+		if ( $contador >= $limite ) {
+			$texto = substr($texto, 0, strrpos(substr($texto, 0, $limite), ' ')) . '...';
+			return $texto;
+		}
+		else{
+			return $texto;
+		}
+	}
+	// String a ser limitada
+	//$string = 'Como limitar caracteres sem cortar as palavras com PHP ';
+	//print(limitarTexto($string, $limite = 25));
+
 }

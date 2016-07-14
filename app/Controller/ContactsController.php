@@ -35,6 +35,44 @@ class ContactsController extends AppController {
 		$this->redirect(array('action' => 'view', $id));
 	}
 
+/**
+		* retorna mensagens de contatos enviados pelo site
+		* @return void
+	*/
+	public function notifications(){
+		$this->recursive = 0;
+		$data = $this->Contact->find('all',
+			array(
+				'limit'=> 10,
+				'conditions'=> array(
+					'Contact.status'=> 0
+				),
+				'order' => array(
+					'Contact.created' => 'DESC'
+				)
+			)
+		);
+		return $data;
+	}
+
+
+/**
+	* retorna o tatal de mensagem de contatos enviados que não foram lidas
+	* @return void
+*/
+	public function totalMensage(){
+		$this->recursive = 0;
+		$total = $this->Contact->find('count',
+			array(
+				'conditions'=> array(
+					'Contact.status'=> 0
+				)
+			)
+		);
+		return $total;
+	}
+
+
 	public function index() {
 		if ($this->request->is('post')) {
 			$this->Contact->create();
