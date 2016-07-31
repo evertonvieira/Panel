@@ -28,7 +28,6 @@ module.exports = function (grunt) {
 			cssAdmin: {
 				src:[
 					'app/webroot/css/bootstrap.css',
-					'app/webroot/css/bootstrap-theme.css',
 					'app/webroot/theme/Sistema/css/dataTables.bootstrap.css',
 					'app/webroot/css/datetimepicker.css',
 					'app/webroot/theme/Sistema/css/font-awesome.min.css',
